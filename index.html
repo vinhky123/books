@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thư viện tri thức — Tổng hợp các cuốn sách</title>
+  <meta name="description" content="Thư viện tổng hợp trực quan các cuốn sách." />
+  <link rel="stylesheet" href="css/landing.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="hero__kicker">Thư viện tri thức</p>
+      <h1 class="hero__title">Tổng hợp sách,<br>trực quan &amp; có hệ thống</h1>
+      <p class="hero__sub">
+        Mỗi cuốn sách được tinh lọc thành các luận điểm cốt lõi, trình bày theo
+        sơ đồ phân cấp, kèm giải thích <b>vì sao</b> và <b>tác dụng thực tế</b>.
+      </p>
+      <div class="hero__stats">
+        <div><span id="statBooks">0</span><small>sách</small></div>
+        <div><span id="statReady">0</span><small>đã hoàn thiện</small></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FILTER BAR -->
+  <div class="filterbar">
+    <div class="filterbar__inner">
+      <input type="search" id="search" placeholder="🔎 Tìm theo tên, tác giả, chủ đề…" aria-label="Tìm sách" />
+      <div class="filterbar__tags" id="tagFilter"><!-- tags injected --></div>
+    </div>
+  </div>
+
+  <!-- BOOK GRID -->
+  <main class="shelf">
+    <div class="grid" id="grid"><!-- book cards injected by JS --></div>
+    <p class="empty" id="empty" hidden>Không tìm thấy cuốn sách nào.</p>
+  </main>
+
+  <footer class="footer">
+    <p>Đây là trang tổng hợp cá nhân. Bấm vào một cuốn để đọc bản trực quan đầy đủ.</p>
+  </footer>
+
+  <script src="js/landing.js"></script>
+</body>
+</html>
