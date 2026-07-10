@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  BOOK PAGE TEMPLATE  —  copy this folder, fill the [SLOT] markers ║
+  ║  Backbone: Hero → Frame → Concepts → Application → Lens → Closing ║
+  ║  Full guide: ../../STRUCTURE.md                                   ║
+  ║                                                                   ║
+  ║  HOW TO START A NEW BOOK:                                         ║
+  ║   1. Copy _template/ → books/<slug>/                              ║
+  ║   2. Replace every [SLOT: ...] marker below                       ║
+  ║   3. Set the accent color (optional) in <style> below             ║
+  ║   4. Register the book in ../js/landing.js (BOOKS array)          ║
+  ║   5. Remove this comment block                                    ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[SLOT: Book title] — Tổng hợp trực quan</title>
+  <meta name="description" content="[SLOT: one-line description, ~120 chars]" />
+
+  <!-- Optional: per-book accent color. Delete to use default indigo. -->
+  <style>
+    :root { --accent: #4f46e5; --accent-d: #4338ca; --accent-tint: #eef2ff; }
+  </style>
+
+  <link rel="stylesheet" href="../../assets/book.css" />
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="layout">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__brand">
+        <span class="sidebar__dot"></span>
+        <span>[SLOT: short book title]</span>
+        <button class="sidebar__close" id="sidebarClose" aria-label="Đóng menu">✕</button>
+      </div>
+
+      <a href="../../index.html" class="sidebar__back">← Thư viện sách</a>
+
+      <!-- TOC: mirror the sections below. One <a class="tree__l1"> per concept. -->
+      <nav class="tree" id="tree">
+        <p class="tree__part">Khung</p>
+        <a href="#frame" class="tree__l1">30 giây — Các ý chính</a>
+
+        <p class="tree__part">Khái niệm</p>
+        <a href="#concept-1" class="tree__l1">1 · [SLOT: concept 1]</a>
+        <a href="#concept-2" class="tree__l1">2 · [SLOT: concept 2]</a>
+        <!-- Add one <a> per concept card below. -->
+
+        <p class="tree__part">Áp dụng & Phản biện</p>
+        <a href="#application" class="tree__l1">Ứng dụng thực tế</a>
+        <a href="#critique" class="tree__l1">Góc nhìn phản biện</a>
+      </nav>
+
+      <a href="#top" class="sidebar__top">↑ Lên đầu trang</a>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main" id="top">
+
+      <div class="mobilebar">
+        <button class="mobilebar__btn" id="menuBtn">☰ Mục lục</button>
+      </div>
+
+      <!-- ============ 0 · IDENTITY HERO ============ -->
+      <section class="hero">
+        <div class="hero__inner">
+          <p class="hero__kicker">[SLOT: kicker, e.g. "Tổng hợp · có hệ thống · đã cross-check"]</p>
+          <h1 class="hero__title">[SLOT: Original title]</h1>
+          <p class="hero__titlevi">[SLOT: Vietnamese title]</p>
+          <p class="hero__sub">[SLOT: the book's central promise / tagline — one sentence]</p>
+          <p class="hero__meta">[SLOT: Author] · [SLOT: Year] · [SLOT: Genre / Tag]</p>
+
+          <!-- ★ Central thesis — the single sentence that the whole book argues. -->
+          <div class="hero__formula">
+            <span class="hf__label">Luận điểm trung tâm</span>
+            <div class="hf__eq">
+              <!-- Optional: render the thesis as an equation if the book has one. -->
+              <span>[SLOT: factor A]</span>
+              <span class="hf__op">[op: = × +]</span>
+              <span>[SLOT: factor B]</span>
+              <span class="hf__op">[op]</span>
+              <span class="hf__accent">[SLOT: the key variable]</span>
+            </div>
+            <p class="hf__note">[SLOT: one-line gloss on the thesis]</p>
+          </div>
+
+          <p class="hero__intro">
+            [SLOT: 2–3 sentences explaining how the page is organized — the backbone:
+            <b>Frame</b> for a 30-second scan, <b>Concepts</b> for depth, <b>Application</b>
+            for action, <b>Lens</b> for honest critique.]
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 1 · 30-SECOND FRAME ============ -->
+      <!-- The orienting spine. One line per core idea. Each links to its concept card. -->
+      <section id="frame" class="frame">
+        <div class="frame__head">
+          <span class="frame__no">◎</span>
+          <div>
+            <p class="frame__part">Bản đồ ý tưởng</p>
+            <h2>30 giây — Các ý chính</h2>
+          </div>
+        </div>
+        <ol class="frame__list">
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-1">[SLOT: concept 1 name]</a></b>
+              <span>[SLOT: one-line essence — ≤ 14 words]</span>
+            </div>
+            <span class="frame__tag">[SLOT: tag, e.g. "Cơ chế"]</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-2">[SLOT: concept 2 name]</a></b>
+              <span>[SLOT: one-line essence]</span>
+            </div>
+            <span class="frame__tag">[SLOT: tag]</span>
+          </li>
+          <!-- Add one <li> per concept. Keep ≤ 6 for scannability. -->
+        </ol>
+      </section>
+
+      <!-- ============ 2 · CONCEPT DEEP-DIVES ============ -->
+      <!-- ★ THE CORE. One .concept card per idea. Fixed schema: WHAT/WHY/EVIDENCE/LINK.
+           The fixed slots are the anti-prose enforcement — fill each, no rambling. -->
+
+      <!-- ---- Concept 1 ---- -->
+      <section id="concept-1" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">1</span>
+          <div>
+            <p class="concept__part">[SLOT: part/cluster label]</p>
+            <h2>[SLOT: concept name]</h2>
+          </div>
+        </div>
+        <p class="concept__def">[SLOT: ONE-sentence definition — the tightest possible bounding of the idea.]</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>[SLOT: what the idea IS — bounded precisely, contrasted with what it is not.]</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>[SLOT: the MECHANISM — why it works. This is the editorial DNA. Be specific: name the underlying process (neuro, econ, psych).]</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>[SLOT: EVIDENCE — a study, a concrete example, or a number. Cite the source; cross-check attributions.]</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>[SLOT: how this concept CONNECTS — to the thesis, to other concepts, or to its application. Makes structure visible.]</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---- Concept 2 ---- -->
+      <section id="concept-2" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">2</span>
+          <div>
+            <p class="concept__part">[SLOT: part/cluster label]</p>
+            <h2>[SLOT: concept name]</h2>
+          </div>
+        </div>
+        <p class="concept__def">[SLOT: ONE-sentence definition.]</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>[SLOT]</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>[SLOT]</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>[SLOT]</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>[SLOT]</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Repeat .concept cards as needed. Alternate .concept / .concept--alt for rhythm.
+           You may also drop in legacy blocks (.compare, .vrm, .why, .eqbox, .insight)
+           inside a concept section when they fit better than the fixed rows. -->
+
+      <!-- Optional: a part-banner to separate book Parts if the book has them. -->
+      <!--
+      <section class="part-banner">
+        <p class="part-banner__kicker">Phần 2</p>
+        <h2>[SLOT: part title]</h2>
+        <p>[SLOT: one-line transition]</p>
+      </section>
+      -->
+
+      <!-- ============ 3 · APPLICATION LAB ============ -->
+      <section id="application" class="sec sec--alt">
+        <div class="sec__head">
+          <span class="sec__no">▶</span>
+          <div>
+            <p class="sec__part">Tác dụng thực tế</p>
+            <h2>Ứng dụng — Biến ý tưởng thành hành động</h2>
+          </div>
+        </div>
+        <p class="lede">[SLOT: one or two lines framing the actionable takeaways below.]</p>
+
+        <!-- Decision rules / tactics. Reuse .ticks (term : explanation + Tác dụng). -->
+        <div class="ticks">
+          <div class="tick">
+            <b>[SLOT: action / rule]</b>
+            <span>[SLOT: how to do it. <i>Tác dụng:</i> why it works in practice.]</span>
+          </div>
+          <div class="tick">
+            <b>[SLOT: action / rule]</b>
+            <span>[SLOT: how + <i>Tác dụng:</i> ...]</span>
+          </div>
+        </div>
+
+        <!-- Optional: a practice timeline. -->
+        <!--
+        <div class="timeline">
+          <div class="tl"><div class="tl__w">[SLOT: step]</div><p>[SLOT]</p></div>
+        </div>
+        -->
+      </section>
+
+      <!-- ============ 4 · CRITICAL LENS ============ -->
+      <!-- Mandatory honesty section. Limitations, edge cases, source corrections. -->
+      <section id="critique" class="sec">
+        <div class="sec__head">
+          <span class="sec__no">!</span>
+          <div>
+            <p class="sec__part">Cân bằng</p>
+            <h2>Góc nhìn phản biện</h2>
+          </div>
+        </div>
+        <p class="lede">[SLOT: framing line — e.g. "Sách và các bản tóm tắt thường một chiều khen ngợi. Đây là những điểm đáng cân nhắc."]</p>
+        <div class="crit-grid">
+          <div class="crit"><span class="crit__n">01</span><p>[SLOT: limitation or counter-evidence.]</p></div>
+          <div class="crit"><span class="crit__n">02</span><p>[SLOT: when the book's advice fails.]</p></div>
+          <div class="crit"><span class="crit__n">03</span><p>[SLOT: source correction or missing nuance.]</p></div>
+        </div>
+      </section>
+
+      <!-- ============ 5 · CLOSING ============ -->
+      <section class="closing">
+        <blockquote class="closing__q">[SLOT: key quote in original language]</blockquote>
+        <p class="closing__t">[SLOT: Vietnamese translation]</p>
+
+        <details class="sources">
+          <summary>Nguồn tham khảo</summary>
+          <ul>
+            <li><a href="[SLOT: url]" target="_blank" rel="noopener">[SLOT: source label]</a></li>
+            <li><a href="[SLOT: url]" target="_blank" rel="noopener">[SLOT: source label]</a></li>
+          </ul>
+        </details>
+      </section>
+
+      <footer class="footer">
+        <p>Visual tổng hợp cuốn <em>[SLOT: title]</em> ([SLOT: author], [SLOT: year]) · Đã cross-check &amp; đính chính nguồn.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../../assets/book.js"></script>
+</body>
+</html>

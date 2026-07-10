@@ -1,7 +1,24 @@
 /* ============================================================
-   DEEP WORK — book page
-   Editorial / technical: hard sans, tiny radius, fewer boxes.
-   Separation by whitespace + hairline rules, not cards.
+   SHARED BOOK TEMPLATE  —  assets/book.css
+   ------------------------------------------------------------
+   Every book page links to this file. Each book may optionally
+   define its own accent color via a CSS variable on <html> or
+   a <style> block in the page, e.g.:
+       :root { --accent: #0f766e; --accent-d: #115e59; }
+
+   Backbone (see STRUCTURE.md):
+     0 · IDENTITY HERO          (.hero)
+     1 · 30-SECOND FRAME        (.frame)
+     2 · CONCEPT DEEP-DIVES     (.concept)
+     3 · APPLICATION LAB        (.ticks/.callout/.timeline)
+     4 · CRITICAL LENS          (.crit)
+     5 · CLOSING                (.closing)
+
+   Editorial DNA (preserve):
+     - "Vì sao" (why-it-works)  -> concept [WHY] slot / .why
+     - Actionable "Tác dụng"     -> [EVIDENCE/LINK] / .ticks
+     - Cross-check & corrections -> .alert / .crit
+     - Bilingual VN + EN labels
    ============================================================ */
 
 :root {
@@ -110,7 +127,7 @@ ul { margin: .3rem 0; }
 .main { min-width: 0; }
 
 /* ============================================================
-   HERO
+   0 · IDENTITY HERO
    ============================================================ */
 .hero {
   padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3.5rem);
@@ -126,6 +143,7 @@ ul { margin: .3rem 0; }
   font-weight: 700; font-size: clamp(2.4rem, 6vw, 3.8rem);
   line-height: 1; margin: 0; letter-spacing: -.03em; color: var(--ink);
 }
+.hero__titlevi { color: var(--ink-faint); font-size: 1rem; font-weight: 600; margin: .4rem 0 0; }
 .hero__sub { color: var(--ink-soft); font-size: clamp(1.05rem, 2vw, 1.25rem); margin: 1rem 0 .3rem; }
 .hero__meta { color: var(--ink-faint); font-size: .85rem; margin: 0 0 1.6rem; }
 
@@ -147,7 +165,7 @@ ul { margin: .3rem 0; }
 .hero__intro b { color: var(--ink); }
 
 /* ============================================================
-   SECTION — separation by rules + spacing, not cards
+   SECTION BASE — separation by rules + spacing, not cards
    ============================================================ */
 .sec { padding: clamp(2.2rem, 5vw, 3.4rem) clamp(1.5rem, 5vw, 3.5rem); border-bottom: 1px solid var(--line); }
 .sec--alt { background: var(--bg-alt); }
@@ -167,7 +185,84 @@ ul { margin: .3rem 0; }
 h3, h4 { letter-spacing: -.01em; }
 .why h4, .subblock__t { font-weight: 700; font-size: 1.1rem; margin: 0 0 .4rem; }
 
-/* ---------- compare (deep vs shallow) — columns with top rule ---------- */
+/* ============================================================
+   1 · 30-SECOND FRAME  (orienting concept map — NEW)
+   The scannable spine. Each item links to its concept card.
+   ============================================================ */
+.frame { padding: clamp(2.2rem, 5vw, 3.4rem) clamp(1.5rem, 5vw, 3.5rem); border-bottom: 1px solid var(--line); }
+.frame__head { display: flex; gap: 1rem; align-items: baseline; margin-bottom: 1.4rem; }
+.frame__no {
+  flex-shrink: 0; font-weight: 700; font-size: 1rem; color: var(--accent-d);
+  width: 38px; text-align: right; font-variant-numeric: tabular-nums;
+}
+.frame__part { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); font-weight: 700; margin: 0 0 .15rem; }
+.frame__head h2 { font-weight: 700; font-size: clamp(1.35rem, 3vw, 1.85rem); margin: 0; letter-spacing: -.02em; }
+
+.frame__list {
+  list-style: none; padding: 0; margin: 0;
+  border-top: 1px solid var(--line);
+  counter-reset: frame;
+}
+.frame__list li {
+  counter-increment: frame;
+  display: grid; grid-template-columns: 2.4rem 1fr auto; gap: 1rem;
+  align-items: baseline;
+  padding: .85rem .2rem;
+  border-bottom: 1px solid var(--line);
+}
+.frame__list li::before {
+  content: counter(frame, decimal-leading-zero);
+  color: var(--accent-d); font-weight: 700; font-variant-numeric: tabular-nums;
+  font-size: .95rem;
+}
+.frame__main { min-width: 0; }
+.frame__main b { color: var(--ink); display: block; font-size: 1rem; }
+.frame__main span { color: var(--ink-soft); font-size: .9rem; }
+.frame__tag {
+  font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--ink-faint); white-space: nowrap;
+}
+
+/* ============================================================
+   2 · CONCEPT DEEP-DIVE CARD  (NEW — fixed schema per concept)
+   Slots: WHAT / WHY / EVIDENCE / LINK. Each is a labelled row.
+   The fixed schema enforces structure and prevents prose creep.
+   ============================================================ */
+.concept { padding: clamp(2.2rem, 5vw, 3.4rem) clamp(1.5rem, 5vw, 3.5rem); border-bottom: 1px solid var(--line); }
+.concept--alt { background: var(--bg-alt); }
+
+.concept__head { display: flex; gap: 1rem; align-items: baseline; margin-bottom: .4rem; }
+.concept__no {
+  flex-shrink: 0; font-weight: 700; font-size: 1rem; color: var(--accent-d);
+  width: 38px; text-align: right; font-variant-numeric: tabular-nums;
+}
+.concept__part { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--accent); font-weight: 700; margin: 0 0 .15rem; }
+.concept__head h2 { font-weight: 700; font-size: clamp(1.35rem, 3vw, 1.85rem); margin: 0; letter-spacing: -.02em; }
+
+.concept__def { font-size: 1.04rem; color: var(--ink); max-width: 70ch; margin: 0 0 1.6rem; padding-left: calc(38px + 1rem); }
+
+.concept__rows { border-top: 1px solid var(--line); }
+.concept__row {
+  display: grid; grid-template-columns: 130px 1fr; gap: 1rem;
+  padding: 1rem .2rem; border-bottom: 1px solid var(--line); align-items: start;
+}
+.concept__label {
+  font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+  color: var(--accent-d);
+}
+.concept__label--why      { color: var(--accent-d); }
+.concept__label--evidence { color: var(--shallow); }
+.concept__label--link     { color: var(--ink-faint); }
+.concept__row p { margin: 0; color: var(--ink-soft); font-size: .94rem; }
+.concept__row p b { color: var(--ink); }
+.concept__row p i { color: var(--accent-d); font-style: normal; font-weight: 600; }
+
+/* ============================================================
+   LEGACY / REUSABLE CONTENT BLOCKS
+   (ported from deep-work; still valid inside any section/concept)
+   ============================================================ */
+
+/* ---------- compare (two-column A vs B) ---------- */
 .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 .compare__col { padding-top: .8rem; border-top: 3px solid var(--accent); }
 .compare__col--shallow { border-top-color: var(--shallow); }
@@ -178,7 +273,7 @@ h3, h4 { letter-spacing: -.01em; }
 .compare__list li { padding: .25rem 0 .25rem 1.1rem; position: relative; font-size: .9rem; color: var(--ink-soft); }
 .compare__list li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
 
-/* ---------- insight: subtle tint + left bar, not a box ---------- */
+/* ---------- insight: subtle tint + left bar ---------- */
 .insight {
   margin-top: 1.5rem; padding: .9rem 1rem .9rem 1.1rem;
   background: var(--accent-tint); border-left: 3px solid var(--accent);
@@ -187,7 +282,7 @@ h3, h4 { letter-spacing: -.01em; }
 .insight p { margin: 0; color: var(--ink-soft); }
 .insight b { color: var(--ink); }
 
-/* ---------- why ---------- */
+/* ---------- why (prose explanation) ---------- */
 .why { margin-bottom: 1.4rem; }
 .why p { margin: .45rem 0; color: var(--ink-soft); }
 .why b { color: var(--ink); }
@@ -202,7 +297,7 @@ h3, h4 { letter-spacing: -.01em; }
 .eqbox__eq .t2 { color: #fff; background: var(--accent); padding: .1rem .45rem; }
 .eqbox__cap { color: var(--ink-soft); margin-top: .6rem; font-size: .9rem; }
 
-/* ---------- VRM — columns, no cards ---------- */
+/* ---------- VRM / multi-perspective columns ---------- */
 .vrm { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .vrm__item { padding-top: .8rem; border-top: 2px solid var(--ink); }
 .vrm__tag { display: inline-block; font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-faint); margin-bottom: .5rem; }
@@ -210,21 +305,19 @@ h3, h4 { letter-spacing: -.01em; }
 .vrm__item p { margin: .35rem 0; font-size: .9rem; color: var(--ink-soft); }
 .vrm__item b { color: var(--ink); }
 
-/* ---------- alert ---------- */
+/* ---------- alert (source correction / caveat) ---------- */
 .alert { display: flex; gap: .8rem; align-items: flex-start; background: var(--warn-bg); border-left: 3px solid var(--shallow); padding: .9rem 1rem; margin: 1.4rem 0; font-size: .9rem; color: #78350f; }
 .alert__icon { font-size: 1.1rem; }
 .alert ul { margin: .3rem 0 0; padding-left: 1.2rem; }
 .alert b { color: #451a03; }
 
-/* ---------- part banner ---------- */
+/* ---------- part banner (dark divider) ---------- */
 .part-banner { padding: clamp(2.2rem,5vw,3.4rem) clamp(1.5rem,5vw,3.5rem); background: var(--ink); color: #e7ebf7; }
 .part-banner__kicker { font-size: .7rem; text-transform: uppercase; letter-spacing: .14em; color: #a5b4fc; font-weight: 700; margin: 0 0 .4rem; }
 .part-banner h2 { font-size: clamp(1.4rem,3.5vw,2rem); margin: 0 0 .4rem; color: #fff; letter-spacing: -.02em; font-weight: 700; }
 .part-banner p { margin: 0; color: #b8c0dd; }
 
-/* ============================================================
-   RULE SUB-BLOCKS
-   ============================================================ */
+/* ---------- rule sub-blocks ---------- */
 .subblock { margin-top: 1.8rem; }
 .subblock__d { color: var(--ink-soft); margin: 0 0 1rem; }
 
@@ -243,7 +336,7 @@ h3, h4 { letter-spacing: -.01em; }
 .philo-row__how, .philo-row__why { font-size: .86rem; color: var(--ink-soft); }
 .philo-row__why b { color: var(--accent-d); }
 
-/* ticks — definition list via hairline, NOT boxes */
+/* ticks — definition list via hairline */
 .ticks { border-top: 1px solid var(--line); }
 .tick {
   display: grid; grid-template-columns: 170px 1fr; gap: 1rem;
@@ -286,14 +379,18 @@ h3, h4 { letter-spacing: -.01em; }
 .tl__w { font-weight: 700; color: var(--accent-d); margin-bottom: .1rem; font-size: .95rem; }
 .tl p { margin: 0; color: var(--ink-soft); font-size: .9rem; }
 
-/* critique — hairline list */
+/* ============================================================
+   4 · CRITICAL LENS  (critique — hairline list)
+   ============================================================ */
 .crit-grid { border-top: 1px solid var(--line); }
 .crit { display: flex; gap: .9rem; align-items: baseline; padding: .9rem .2rem; border-bottom: 1px solid var(--line); }
 .crit__n { font-weight: 700; font-size: 1rem; color: var(--crit); flex-shrink: 0; font-variant-numeric: tabular-nums; }
 .crit p { margin: 0; font-size: .88rem; color: var(--ink-soft); }
 .crit b { color: var(--ink); }
 
-/* closing */
+/* ============================================================
+   5 · CLOSING
+   ============================================================ */
 .closing { padding: clamp(2.5rem,6vw,4rem) clamp(1.5rem,5vw,3.5rem); background: var(--bg-alt); border-top: 1px solid var(--line); }
 .closing__q { font-weight: 600; font-size: clamp(1.2rem,3vw,1.7rem); margin: 0 auto .4rem; max-width: 26ch; color: var(--ink); letter-spacing: -.02em; }
 .closing__t { color: var(--ink-soft); margin: 0 auto 1.6rem; }
@@ -316,6 +413,8 @@ h3, h4 { letter-spacing: -.01em; }
   .compare { grid-template-columns: 1fr; gap: 1.4rem; }
   .philo-row { grid-template-columns: 1fr; gap: .3rem; }
   .tick { grid-template-columns: 1fr; gap: .2rem; }
+  .concept__row { grid-template-columns: 1fr; gap: .2rem; }
+  .concept__def { padding-left: 0; }
 }
 @media (max-width: 920px) {
   .layout { grid-template-columns: 1fr; }

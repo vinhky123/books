@@ -1,5 +1,11 @@
 /* ============================================================
-   DEEP WORK — sidebar, scroll-spy, mobile drawer
+   SHARED BOOK TEMPLATE  —  assets/book.js
+   ------------------------------------------------------------
+   Sidebar drawer + reading-progress + scroll-spy + reveal.
+   Expects these elements (see _template/index.html):
+     #progressBar, #sidebar, #menuBtn, #sidebarClose,
+     .tree a[href^="#"]   (sidebar links)
+   No per-book config needed. Loaded as-is on every book page.
    ============================================================ */
 (function () {
   'use strict';
@@ -7,6 +13,7 @@
   const sidebar = document.getElementById('sidebar');
   const menuBtn = document.getElementById('menuBtn');
   const closeBtn = document.getElementById('sidebarClose');
+  if (!sidebar) return;
 
   /* ---- scrim for mobile drawer ---- */
   const scrim = document.createElement('div');
@@ -31,7 +38,7 @@
     const h = document.documentElement;
     const pct = h.scrollHeight - h.clientHeight > 0
       ? (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100 : 0;
-    bar.style.width = pct + '%';
+    if (bar) bar.style.width = pct + '%';
   }
   document.addEventListener('scroll', onScroll, { passive: true });
 
@@ -56,8 +63,13 @@
 
   map.forEach((_, sec) => spy.observe(sec));
 
-  /* ---- subtle reveal on scroll ---- */
-  const revealEls = document.querySelectorAll('.compare__col, .insight, .vrm__item, .subblock, .philo-row, .tick, .odx__i, .bonus, .tl, .crit');
+  /* ---- subtle reveal on scroll ----
+     Selector list covers every block type in the template.
+     Add new block classes here when extending the system. */
+  const revealEls = document.querySelectorAll(
+    '.compare__col, .insight, .vrm__item, .subblock, .philo-row, .tick, .odx__i, .bonus, .tl, .crit, ' +
+    '.frame__list li, .concept__row'
+  );
   revealEls.forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(14px)';

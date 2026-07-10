@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Deep Work — Tổng hợp trực quan</title>
   <meta name="description" content="Tổng hợp trực quan, có hệ thống, cuốn Deep Work của Cal Newport." />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="../../assets/book.css" />
 </head>
 <body>
 
@@ -13,7 +13,7 @@
 
   <div class="layout">
 
-    <!-- ============ SIDEBAR: sơ đồ phân cấp tri thức ============ -->
+    <!-- ============ SIDEBAR ============ -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar__brand">
         <span class="sidebar__dot"></span>
@@ -24,26 +24,23 @@
       <a href="../../index.html" class="sidebar__back">← Thư viện sách</a>
 
       <nav class="tree" id="tree">
+        <p class="tree__part">Khung</p>
+        <a href="#frame" class="tree__l1">30 giây — Các ý chính</a>
+
         <p class="tree__part">Phần 1 · Tại sao</p>
-        <a href="#deep-vs-shallow" class="tree__l1">1 · Deep vs Shallow</a>
-        <a href="#formula" class="tree__l1">2 · Công thức năng suất</a>
-        <a href="#vrm" class="tree__l1">3 · Valuable · Rare · Meaningful</a>
-        <a href="#residue" class="tree__l1">4 · Attention Residue</a>
+        <a href="#concept-1" class="tree__l1">1 · Deep vs Shallow</a>
+        <a href="#concept-2" class="tree__l1">2 · Công thức năng suất</a>
+        <a href="#concept-3" class="tree__l1">3 · Valuable · Rare · Meaningful</a>
+        <a href="#concept-4" class="tree__l1">4 · Attention Residue</a>
 
         <p class="tree__part">Phần 2 · 4 Quy tắc</p>
-        <div class="tree__branch">
-          <a href="#rule-1" class="tree__l1">Q1 · Thói quen DW</a>
-          <a href="#philosophies" class="tree__l2">└ 4 triết lý</a>
-          <a href="#ritualize" class="tree__l2">└ Ritualize</a>
-          <a href="#4dx" class="tree__l2">└ 4DX</a>
-        </div>
+        <a href="#rule-1" class="tree__l1">Q1 · Thói quen DW</a>
         <a href="#rule-2" class="tree__l1">Q2 · Chấp nhận nhàm chán</a>
         <a href="#rule-3" class="tree__l1">Q3 · Cắt giảm MXH</a>
         <a href="#rule-4" class="tree__l1">Q4 · Loại bỏ Shallow</a>
 
-        <p class="tree__part">Mở rộng</p>
-        <a href="#bonus" class="tree__l1">Nguyên tắc phụ</a>
-        <a href="#roadmap" class="tree__l1">Lộ trình 4 tuần</a>
+        <p class="tree__part">Áp dụng & Phản biện</p>
+        <a href="#application" class="tree__l1">Ứng dụng thực tế</a>
         <a href="#critique" class="tree__l1">Góc nhìn phản biện</a>
       </nav>
 
@@ -53,16 +50,16 @@
     <!-- ============ MAIN ============ -->
     <main class="main" id="top">
 
-      <!-- mobile bar -->
       <div class="mobilebar">
         <button class="mobilebar__btn" id="menuBtn">☰ Mục lục</button>
       </div>
 
-      <!-- HERO -->
+      <!-- ============ 0 · IDENTITY HERO ============ -->
       <section class="hero">
         <div class="hero__inner">
           <p class="hero__kicker">Tổng hợp · có hệ thống · đã cross-check</p>
           <h1 class="hero__title">Deep Work</h1>
+          <p class="hero__titlevi">Làm việc sâu</p>
           <p class="hero__sub">Sống cuộc đời tập trung — vì đó là kiểu cuộc đời tốt nhất.</p>
           <p class="hero__meta">Cal Newport · 2016 · Self-help / Năng suất</p>
 
@@ -79,189 +76,203 @@
           </div>
 
           <p class="hero__intro">
-            Trang này tổ chức toàn bộ cuốn sách theo cấu trúc 2 phần:
-            <b>Phần 1</b> giải thích <i>tại sao</i> khả năng tập trung sâu lại quý và hiếm;
-            <b>Phần 2</b> đưa ra 4 quy tắc cụ thể để <i>biến nó thành thói quen</i>.
-            Mỗi khái niệm đều kèm <b>vì sao nó hiệu quả</b> và <b>tác dụng thực tế</b>.
+            Trang này tổ chức cuốn sách theo cấu trúc mới: phần <b>30 giây</b> cho bản đồ
+            ý tưởng, các <b>Concept</b> đi sâu từng khái niệm (kèm vì sao + bằng chứng),
+            <b>Ứng dụng</b> gom hành động cụ thể, và <b>Phản biện</b> cho góc nhìn cân bằng.
             Dùng mục lục bên trái để định hướng.
           </p>
         </div>
       </section>
 
-      <!-- ===== 1. DEEP VS SHALLOW ===== -->
-      <section id="deep-vs-shallow" class="sec">
-        <div class="sec__head">
-          <span class="sec__no">1</span>
+      <!-- ============ 1 · 30-SECOND FRAME ============ -->
+      <section id="frame" class="frame">
+        <div class="frame__head">
+          <span class="frame__no">◎</span>
           <div>
-            <p class="sec__part">Phần 1 · Ý tưởng cốt lõi</p>
+            <p class="frame__part">Bản đồ ý tưởng</p>
+            <h2>30 giây — Các ý chính</h2>
+          </div>
+        </div>
+        <ol class="frame__list">
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-1">Deep vs Shallow Work</a></b>
+              <span>Mọi việc trí óc chia làm hai loại đối lập — phân biệt được là điều kiện tiên quyết.</span>
+            </div>
+            <span class="frame__tag">Định nghĩa</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-2">Công thức năng suất</a></b>
+              <span>Thành quả = Thời gian × Cường độ. Một yếu tố về 0, kết quả bằng 0.</span>
+            </div>
+            <span class="frame__tag">Cơ chế</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-3">Valuable · Rare · Meaningful</a></b>
+              <span>Deep Work quý, hiếm và ý nghĩa — ba góc độ bảo vệ luận điểm.</span>
+            </div>
+            <span class="frame__tag">Luận chứng</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-4">Attention Residue</a></b>
+              <span>Đổi ngữ cảnh để lại "dư âm" chú ý — cặn kiệt năng lực nhận thức.</span>
+            </div>
+            <span class="frame__tag">Khóa học</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#rule-1">4 Quy tắc</a></b>
+              <span>Ritualize · Chấp nhận nhàm chán · Cắt MXH · Loại bỏ Shallow.</span>
+            </div>
+            <span class="frame__tag">Đơn thuốc</span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ 2 · CONCEPT DEEP-DIVES — Phần 1 ============ -->
+
+      <!-- Concept 1 -->
+      <section id="concept-1" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">1</span>
+          <div>
+            <p class="concept__part">Phần 1 · Ý tưởng cốt lõi</p>
             <h2>Deep Work là gì — và vì sao nó quý?</h2>
           </div>
         </div>
-
-        <p class="lede">
-          Newport chia mọi công việc trí óc thành hai loại đối lập. Việc <b>phân biệt</b>
-          được chúng là điều kiện tiên quyết — vì bạn không thể bảo vệ thứ chưa biết nhận diện.
-        </p>
-
-        <div class="compare">
-          <div class="compare__col compare__col--deep">
-            <h3>Deep Work</h3>
-            <p class="compare__def">Hoạt động chuyên môn ở trạng thái tập trung không xao nhãng, đẩy nhận thức đến giới hạn.</p>
-            <ul class="compare__list">
-              <li><b>Ví dụ:</b> viết tài liệu chiến lược, lập trình tính năng phức tạp, học thuật toán mới.</li>
-              <li><b>Đặc trưng:</b> khó, cần tư duy liên tục, không thể làm giữa chừng khi bị ngắt.</li>
-              <li><b>Giá trị:</b> tạo kết quả <i>mới</i>, khó bị thay thế, khó sao chép.</li>
-            </ul>
+        <p class="concept__def">Newport chia mọi công việc trí óc thành hai loại đối lập — và bạn không thể bảo vệ thứ chưa biết nhận diện.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              <b>Deep Work</b> — hoạt động chuyên môn ở trạng thái tập trung không xao nhãng, đẩy nhận thức đến giới hạn (viết chiến lược, lập trình phức tạp, học thuật toán mới). Khó, cần tư duy liên tục, tạo kết quả <i>mới</i> khó sao chép.<br><br>
+              <b>Shallow Work</b> — tác vụ logistic, lặp lại (email, họp cập nhật, chat). Dễ, gián đoạn được, ai cũng làm sau vài giờ đào tạo — cần thiết để duy trì nhưng <i>không tạo</i> năng lực cạnh tranh.
+            </p>
           </div>
-          <div class="compare__col compare__col--shallow">
-            <h3>Shallow Work</h3>
-            <p class="compare__def">Tác vụ logistic, lặp lại, không cần nhiều tư duy.</p>
-            <ul class="compare__list">
-              <li><b>Ví dụ:</b> trả lời email, họp cập nhật trạng thái, chat, sắp xếp lịch.</li>
-              <li><b>Đặc trưng:</b> dễ, gián đoạn được, ai cũng làm được sau vài giờ đào tạo.</li>
-              <li><b>Giá trị:</b> cần thiết để duy trì, nhưng <i>không tạo</i> năng lực cạnh tranh.</li>
-            </ul>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Phần lớn ngày làm việc của dân tri thức bị Shallow Work lấp đầy. Ai <b>chủ động dành khối thời gian liên tục cho Deep Work</b> sẽ tạo ra kết quả tốt hơn hẳn — và đó là lợi thế cạnh tranh ngày càng hiếm.</p>
           </div>
-        </div>
-
-        <div class="insight">
-          <h4>💡 Vì sao điều này quan trọng?</h4>
-          <p>
-            Phần lớn ngày làm việc của dân tri thức ngày nay bị Shallow Work lấp đầy.
-            Ai <b>chủ động dành khối thời gian liên tục cho Deep Work</b> sẽ tạo ra kết quả
-            tốt hơn hẳn — và đó là lợi thế cạnh tranh ngày càng hiếm.
-          </p>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>Đặc trưng phân biệt: hỏi "Cần bao lâu để đào tạo thực tập sinh làm việc này?". Càng lâu = càng sâu = càng cần bảo vệ; ngược lại là shallow.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Nền tảng cho toàn bộ cuốn sách — mọi quy tắc sau này đều nhằm <i>bảo vệ</i> Deep Work và <i>giới hạn</i> Shallow Work. Kết nối trực tiếp với luận điểm trung tâm.</p>
+          </div>
         </div>
       </section>
 
-      <!-- ===== 2. FORMULA ===== -->
-      <section id="formula" class="sec sec--alt">
-        <div class="sec__head">
-          <span class="sec__no">2</span>
+      <!-- Concept 2 -->
+      <section id="concept-2" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">2</span>
           <div>
-            <p class="sec__part">Phần 1 · Cơ chế</p>
+            <p class="concept__part">Phần 1 · Cơ chế</p>
             <h2>Công thức năng suất cốt lõi</h2>
           </div>
         </div>
-
-        <div class="eqbox">
-          <div class="eqbox__eq">
-            Chất lượng công việc = <span class="t1">Thời gian</span> × <span class="t2">Cường độ tập trung</span>
+        <p class="concept__def">Thành quả phụ thuộc vào tích của hai yếu tố — chỉ cần một yếu tố về 0 thì kết quả cũng bằng 0.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              <span style="font-weight:600;">Chất lượng công việc = <span style="color:var(--accent-d);">Thời gian</span> × <span style="background:var(--accent);color:#fff;padding:.1rem .45rem;">Cường độ tập trung</span></span><br><br>
+              Không phải làm nhiều giờ hơn, mà làm <b>sâu</b> hơn. 8 giờ bị ngắt liên tục có thể tạo <i>ít</i> tiến bộ hơn 2 giờ tập trung thuần túy.
+            </p>
           </div>
-          <p class="eqbox__cap">Thành quả phụ thuộc vào <b>tích</b> của hai yếu tố — chỉ cần một yếu tố về 0 thì kết quả cũng bằng 0.</p>
-        </div>
-
-        <div class="why">
-          <h4>Vì sao cường độ lại quyết định?</h4>
-          <p>
-            Khi bạn tập trung liên tục vào một kỹ năng, não hình thành lớp <b>myelin</b>
-            bọc quanh các nơ-ron liên quan — cách cơ thể củng cố một đường dây thần kinh.
-            Myelin càng dày, tín hiệu truyền càng nhanh và kỹ năng càng điêu luyện.
-          </p>
-          <p>
-            Mỗi lần bị phân tâm, bạn <b>ngắt</b> đúng quá trình myelin-hóa này. Vì vậy
-            8 giờ làm việc bị ngắt liên tục có thể tạo <i>ít</i> sự tiến bộ hơn 2 giờ
-            tập trung thuần túy. <b>Đó là lý do Newport nhấn mạnh cường độ, không chỉ thời gian.</b>
-          </p>
-        </div>
-
-        <div class="insight">
-          <h4>💡 Hệ quả thực tiễn</h4>
-          <p>
-            Nếu bạn thường xuyên cảm thấy “làm cả ngày mà không ra gì” — nguyên nhân
-            thường không phải thiếu thời gian, mà là <b>cường độ bị pha loãng</b> bởi
-            liên tục đổi ngữ cảnh (email, tin nhắn, tab).
-          </p>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Khi tập trung liên tục vào một kỹ năng, não hình thành lớp <b>myelin</b> bọc quanh các nơ-ron liên quan — cách cơ thể củng cố đường dây thần kinh. Myelin càng dày, tín hiệu truyền càng nhanh, kỹ năng càng điêu luyện. Mỗi lần bị phân tâm, bạn <b>ngắt</b> đúng quá trình myelin-hóa này.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>Đó là lý do Newport nhấn mạnh <b>cường độ</b>, không chỉ thời gian. "Làm cả ngày mà không ra gì" thường không phải thiếu thời gian, mà là cường độ bị pha loãng bởi liên tục đổi ngữ cảnh (email, tin nhắn, tab).</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Giải thích <i>vì sao</i> Attention Residue (Concept 4) lại tốn kém: mỗi lần đổi ngữ cảnh phá vỡ myelin-hóa → làm giả công thức này ở đúng biến số "Cường độ".</p>
+          </div>
         </div>
       </section>
 
-      <!-- ===== 3. VRM ===== -->
-      <section id="vrm" class="sec">
-        <div class="sec__head">
-          <span class="sec__no">3</span>
+      <!-- Concept 3 -->
+      <section id="concept-3" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">3</span>
           <div>
-            <p class="sec__part">Phần 1 · Luận chứng</p>
+            <p class="concept__part">Phần 1 · Luận chứng</p>
             <h2>Deep Work: Valuable · Rare · Meaningful</h2>
           </div>
         </div>
-
-        <p class="lede">
-          Newport bảo vệ luận điểm bằng ba góc độ bổ sung cho nhau: kinh tế, xã hội học và tâm lý học.
-        </p>
-
-        <div class="vrm">
-          <article class="vrm__item">
-            <div class="vrm__tag">Valuable</div>
-            <h3>Quý giá (góc độ kinh tế)</h3>
-            <p><b>Luận điểm:</b> Kinh tế tri thức thưởng cho hai năng lực — (1) học nhanh thứ phức tạp, (2) sản xuất ở tầm cốt lõi.</p>
-            <p><b>Tác dụng:</b> Cả hai năng lực đều <i>chỉ có thể</i> rèn qua Deep Work. Người sở hữu chúng trở nên khó thay thế.</p>
-          </article>
-          <article class="vrm__item">
-            <div class="vrm__tag">Rare</div>
-            <h3>Hiếm (góc độ xã hội học)</h3>
-            <p><b>Luận điểm:</b> Văn phòng mở, mạng xã hội, tin nhắn tức thời khiến Shallow Work trở thành mặc định.</p>
-            <p><b>Tác dụng:</b> Vì Deep Work ngày càng hiếm, <i>giá trị</i> của nó càng cao theo quy luật cung–cầu.</p>
-          </article>
-          <article class="vrm__item">
-            <div class="vrm__tag">Meaningful</div>
-            <h3>Ý nghĩa (góc độ tâm lý học)</h3>
-            <p><b>Luận điểm:</b> Con người tìm thấy ý nghĩa qua tinh thần “thợ thủ công” — làm chủ một việc và làm tốt.</p>
-            <p><b>Tác dụng:</b> Deep Work tạo cảm giác thành tựu sâu hơn việc rải rác nhiều nhiệm vụ nông. Ý nghĩa đến từ <i>làm chủ</i>, không phải đuổi đam mê mơ hồ.</p>
-          </article>
+        <p class="concept__def">Newport bảo vệ luận điểm bằng ba góc độ bổ sung cho nhau: kinh tế, xã hội học và tâm lý học.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              <b>Valuable (kinh tế):</b> Kinh tế tri thức thưởng cho hai năng lực — (1) học nhanh thứ phức tạp, (2) sản xuất ở tầm cốt lõi. Cả hai chỉ rèn qua Deep Work.<br><br>
+              <b>Rare (xã hội học):</b> Văn phòng mở, mạng xã hội, tin nhắn tức thời khiến Shallow Work thành mặc định. Deep Work càng hiếm → giá trị càng cao theo quy luật cung–cầu.<br><br>
+              <b>Meaningful (tâm lý học):</b> Ý nghĩa đến từ tinh thần "thợ thủ công" — làm chủ một việc và làm tốt, không phải đuổi đam mê mơ hồ.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Ba góc độ độc lập đều chỉ về cùng một kết luận: Deep Work đáng để ưu tiên. Chúng củng cố lẫn nhau — quý + hiếm = lợi thế; quý + ý nghĩa = cuộc đời đáng sống.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>Người sở hữu hai năng lực cốt lõi trở nên khó thay thế. Deep Work tạo cảm giác thành tựu sâu hơn việc rải rác nhiều nhiệm vụ nông.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Đây là phần "chẩn đoán" của cuốn sách — trả lời <i>tại sao phải</i> làm Deep Work, đặt nền cho Phần 2 (4 Quy tắc = "đơn thuốc").</p>
+          </div>
         </div>
       </section>
 
-      <!-- ===== 4. ATTENTION RESIDUE ===== -->
-      <section id="residue" class="sec sec--alt">
-        <div class="sec__head">
-          <span class="sec__no">4</span>
+      <!-- Concept 4 -->
+      <section id="concept-4" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">4</span>
           <div>
-            <p class="sec__part">Phần 1 · Khái niệm then chốt</p>
+            <p class="concept__part">Phần 1 · Khái niệm then chốt</p>
             <h2>Attention Residue — Dư âm sự chú ý</h2>
           </div>
         </div>
-
-        <p class="lede">
-          Đây là <b>cơ chế khoa học</b> giải thích vì sao đổi ngữ cảnh lại tốn kém hơn ta tưởng.
-        </p>
-
-        <div class="why">
-          <h4>Hiện tượng</h4>
-          <p>
-            Khi bạn dừng Task A và chuyển sang Task B, <b>một phần chú ý vẫn còn kẹt ở A</b>
-            — giống như miếng bột dính trên tay. Phần "dư" này lén tiêu tốn năng lực nhận thức,
-            khiến bạn làm B kém hiệu quả hơn mà không nhận ra.
-          </p>
-          <p>
-            Càng đổi task nhiều lần trong ngày, càng tích tụ nhiều "dư âm" → hiệu suất giảm dần
-            theo cấp số nhân, dù mỗi lần đổi có vẻ chỉ mất vài giây.
-          </p>
-        </div>
-
-        <div class="alert">
-          <div class="alert__icon">⚠️</div>
-          <div>
-            <b>Đính chính nguồn (đã cross-check):</b> Khái niệm này do
-            <b>Sophie Leroy</b> nghiên cứu (2009), <u>không phải Gloria Mark</u>. Newport đã
-            trộn hai nghiên cứu trong sách nên dễ gây nhầm:
-            <ul>
-              <li><b>Leroy</b> = “dư âm nhận thức” khi đổi task.</li>
-              <li><b>Mark</b> = “thời lượng chú ý” trên màn hình (giảm từ ~2,5 phút năm 2004 → ~47 giây).</li>
-            </ul>
+        <p class="concept__def">Cơ chế khoa học giải thích vì sao đổi ngữ cảnh lại tốn kém hơn ta tưởng.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>Khi dừng Task A chuyển sang Task B, <b>một phần chú ý vẫn kẹt ở A</b> — giống miếng bột dính trên tay. Phần "dư" này lén tiêu tốn năng lực nhận thức, khiến bạn làm B kém hiệu quả mà không nhận ra. Càng đổi task nhiều lần, dư âm tích tụ → hiệu suất giảm dần theo cấp số nhân.</p>
           </div>
-        </div>
-
-        <div class="insight">
-          <h4>💡 Tác dụng khi áp dụng</h4>
-          <p>
-            Gộp (batch) nhiều việc nhỏ cùng loại vào <b>một khối thời gian</b>
-            (vd: trả lời email 2 lần/ngày thay vì cả ngày rải rác) sẽ giảm số lần đổi ngữ cảnh
-            → giảm “dư âm” → giải phóng năng lực nhận thức cho Deep Work.
-          </p>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Bộ não không chuyển ngữ cảnh tức thì — có chi phí "dọn dẹp" nhận thức mỗi lần. Đây là biến số ẩn làm giả công thức "Thời gian × Cường độ": giờ có thể đủ, nhưng cường độ thực bị rỉ ra.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              <span style="background:var(--warn-bg);border-left:3px solid var(--shallow);padding:.7rem .9rem;display:block;color:#78350f;">
+                <b style="color:#451a03;">⚠️ Đính chính nguồn (đã cross-check):</b> Khái niệm này do <b style="color:#451a03;">Sophie Leroy</b> nghiên cứu (2009), <u>không phải Gloria Mark</u>. Newport trộn hai nghiên cứu trong sách:
+                <ul style="margin:.3rem 0 0;padding-left:1.2rem;">
+                  <li><b style="color:#451a03;">Leroy</b> = "dư âm nhận thức" khi đổi task.</li>
+                  <li><b style="color:#451a03;">Mark</b> = "thời lượng chú ý" trên màn hình (giảm từ ~2,5 phút năm 2004 → ~47 giây).</li>
+                </ul>
+              </span>
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Vì sao phải <i>batch</i> (gộp) việc nhỏ vào một khối (Q4) và <i>ritualize</i> (Q1): đều nhằm giảm số lần đổi ngữ cảnh → giảm dư âm. Hệ quả thực tiễn trực tiếp.</p>
+          </div>
         </div>
       </section>
 
-      <!-- ============ PHẦN 2 ============ -->
+      <!-- ============ PART BANNER — Phần 2 ============ -->
       <section class="part-banner">
         <p class="part-banner__kicker">Phần 2</p>
         <h2>4 Quy tắc — Biến Deep Work thành thói quen</h2>
@@ -277,18 +288,14 @@
             <h2>Làm việc sâu thành thói quen hằng ngày</h2>
           </div>
         </div>
-
         <p class="lede">
-          Ý chí là tài nguyên có hạn — nếu mỗi lần vào Deep Work bạn đều phải “vật lộn” với
+          Ý chí là tài nguyên có hạn — nếu mỗi lần vào Deep Work bạn đều phải "vật lộn" với
           bản thân để bắt đầu, bạn sẽ sớm bỏ cuộc. Giải pháp: <b>chuyển sang tự động</b> thông qua hệ thống.
         </p>
 
-        <!-- 4 triết lý -->
-        <div id="philosophies" class="subblock">
+        <div class="subblock">
           <h3 class="subblock__t">A · Chọn 1 trong 4 triết lý</h3>
-          <p class="subblock__d">
-            Không có triết lý nào tốt tuyệt đối — chọn theo mức độ tự chủ thời gian của bạn.
-          </p>
+          <p class="subblock__d">Không có triết lý nào tốt tuyệt đối — chọn theo mức độ tự chủ thời gian của bạn.</p>
           <div class="philo-table">
             <div class="philo-row philo-row--rec">
               <div class="philo-row__name">
@@ -326,27 +333,21 @@
           </div>
         </div>
 
-        <!-- Ritualize -->
-        <div id="ritualize" class="subblock">
+        <div class="subblock">
           <h3 class="subblock__t">B · Ritualize — Nghi thức hóa</h3>
-          <p class="subblock__d">
-            Thay vì dựa vào cảm hứng, thiết kế một <b>nghi thức cố định</b> báo cho não “đã đến giờ tập trung”.
-          </p>
+          <p class="subblock__d">Thay vì dựa vào cảm hứng, thiết kế một <b>nghi thức cố định</b> báo cho não "đã đến giờ tập trung".</p>
           <div class="ticks">
             <div class="tick"><b>Địa điểm cố định</b><span>Ví dụ: thư viện, góc phòng riêng. <i>Tác dụng:</i> não liên kết địa điểm với trạng thái tập trung, vào việc nhanh hơn.</span></div>
             <div class="tick"><b>Hiệu ứng năng lượng</b><span>Ví dụ: một ly cà phê cụ thể, playlist, vài động tác giãn cơ. <i>Tác dụng:</i> tạo tín hiệu khởi động, giảm ma sát bắt đầu.</span></div>
             <div class="tick"><b>Nhiên liệu cho não</b><span>Hạt, bánh quy. <i>Tác dụng:</i> đường huyết thấp → dễ mất tập trung; giữ mức ổn định giúp duy trì chú ý.</span></div>
-            <div class="tick"><b>Khung ~90 phút</b><span><i>Tác dụng:</i> đủ dài để vào “dòng chảy” nhưng chưa đến mức kiệt sức.</span></div>
+            <div class="tick"><b>Khung ~90 phút</b><span><i>Tác dụng:</i> đủ dài để vào "dòng chảy" nhưng chưa đến mức kiệt sức.</span></div>
             <div class="tick"><b>Chỉ MỘT task</b><span><i>Tác dụng:</i> tránh attention residue — toàn bộ năng lực dồn vào một việc.</span></div>
           </div>
         </div>
 
-        <!-- 4DX -->
-        <div id="4dx" class="subblock">
+        <div class="subblock">
           <h3 class="subblock__t">C · Thực thi theo 4DX</h3>
-          <p class="subblock__d">
-            Newport mượn khung <i>4 Disciplines of Execution</i> để biến mục tiêu DW thành hành động đo lường được.
-          </p>
+          <p class="subblock__d">Newport mượn khung <i>4 Disciplines of Execution</i> để biến mục tiêu DW thành hành động đo lường được.</p>
           <div class="odx">
             <div class="odx__i"><span>1</span><div><b>Focus</b> — chọn <i>một</i> chỉ tiêu then chốt (vd: 15 giờ DW/tuần).</div></div>
             <div class="odx__i"><span>2</span><div><b>Lead measures</b> — theo dõi hành động dẫn tới kết quả (số giờ DW thực tế) thay vì chỉ kết quả cuối.</div></div>
@@ -365,14 +366,13 @@
             <h2>Chấp nhận nhàm chán</h2>
           </div>
         </div>
-
         <p class="lede">
           Tập trung là <b>cơ bắp</b>, rèn được cũng xệ được. Newport cảnh báo: nếu bạn liên tục
-          cho não “bú” kích thích (điện thoại khi xếp hàng), bạn đang luyện cơ bắp <i>xao nhãng</i>.
+          cho não "bú" kích thích (điện thoại khi xếp hàng), bạn đang luyện cơ bắp <i>xao nhãng</i>.
         </p>
 
         <div class="why">
-          <h4>Vì sao phải “ôm nhàm chán”?</h4>
+          <h4>Vì sao phải "ôm nhàm chán"?</h4>
           <p>
             Bộ não quen với mức kích thích bạn thường cho nó. Nếu lúc nào rảnh cũng lướt điện thoại,
             ngưỡng chịu đựng sự nhàm chán của bạn hạ xuống → khi cần tập trung dài, bạn sẽ thấy
@@ -400,9 +400,8 @@
             <h2>Cắt giảm mạng xã hội</h2>
           </div>
         </div>
-
         <p class="lede">
-          Đừng tự hỏi “MXH có hữu ích không” — câu hỏi đó luôn trả lời CÓ. Hãy hỏi đúng câu:
+          Đừng tự hỏi "MXH có hữu ích không" — câu hỏi đó luôn trả lời CÓ. Hãy hỏi đúng câu:
           <b>lợi ích nó mang lại có <i>đáng</i> với phần sự chú ý nó ăn mòn không?</b>
         </p>
 
@@ -419,7 +418,7 @@
           <div class="callout__t">🧪 Thử nghiệm 30 ngày</div>
           <p>Ngừng hẳn một dịch vụ trong 30 ngày. Sau đó đánh giá: trong 30 ngày đó có điều gì
           <b>thực sự</b> tồi tệ hoặc bạn <b>thực sự</b> bỏ lỡ không?</p>
-          <p class="callout__why"><i>Tác dụng:</i> vượt qua nỗi sợ “bỏ lỡ” (FOMO) bằng dữ liệu thực tế.
+          <p class="callout__why"><i>Tác dụng:</i> vượt qua nỗi sợ "bỏ lỡ" (FOMO) bằng dữ liệu thực tế.
           Hầu hết phát hiện: chẳng có gì sụp đổ cả.</p>
         </div>
       </section>
@@ -433,7 +432,6 @@
             <h2>Loại bỏ Shallow Work</h2>
           </div>
         </div>
-
         <p class="lede">
           Mục tiêu không phải <i>diệt</i> Shallow Work (nó vẫn cần thiết) mà <b>giới hạn</b> nó,
           để dành chỗ cho Deep Work.
@@ -441,26 +439,31 @@
 
         <div class="ticks">
           <div class="tick"><b>Schedule every minute</b><span>Chia ngày thành các khối, gán nhiệm vụ. <i>Tác dụng:</i> chống trôi thời gian vào việc tự phát.</span></div>
-          <div class="tick"><b>Định lượng độ sâu</b><span>Hỏi: “Cần bao lâu để đào tạo thực tập sinh làm việc này?”. <i>Tác dụng:</i> càng lâu = càng sâu = càng cần bảo vệ; ngược lại là shallow, nên rút gọn/ủy quyền.</span></div>
-          <div class="tick"><b>Ngân sách shallow</b><span>Thỏa thuận với sếp quỹ thời gian hợp lý (~30–50%). <i>Tác dụng:</i> shallow có “giới hạn trên” rõ ràng, không lấn át deep.</span></div>
+          <div class="tick"><b>Định lượng độ sâu</b><span>Hỏi: "Cần bao lâu để đào tạo thực tập sinh làm việc này?". <i>Tác dụng:</i> càng lâu = càng sâu = càng cần bảo vệ; ngược lại là shallow, nên rút gọn/ủy quyền.</span></div>
+          <div class="tick"><b>Ngân sách shallow</b><span>Thỏa thuận với sếp quỹ thời gian hợp lý (~30–50%). <i>Tác dụng:</i> shallow có "giới hạn trên" rõ ràng, không lấn át deep.</span></div>
           <div class="tick"><b>Fixed-schedule productivity</b><span>Cố định giờ kết thúc (vd 17:30), làm ngược lại. <i>Tác dụng:</i> áp lực thời gian buộc bạn ưu tiên đúng thứ quan trọng, bỏ việc thừa.</span></div>
-          <div class="tick"><b>Shutdown ritual</b><span>~15 phút chốt công việc cuối ngày, nói “shutdown complete”. <i>Tác dụng:</i> bộ não tin công việc đã “đóng”, nghỉ thực sự → phục hồi cho ngày sau.</span></div>
+          <div class="tick"><b>Shutdown ritual</b><span>~15 phút chốt công việc cuối ngày, nói "shutdown complete". <i>Tác dụng:</i> bộ não tin công việc đã "đóng", nghỉ thực sự → phục hồi cho ngày sau.</span></div>
         </div>
       </section>
 
-      <!-- BONUS -->
-      <section id="bonus" class="sec">
+      <!-- ============ 3 · APPLICATION LAB ============ -->
+      <section id="application" class="sec">
         <div class="sec__head">
-          <span class="sec__no">+</span>
+          <span class="sec__no">▶</span>
           <div>
-            <p class="sec__part">Mở rộng</p>
-            <h2>3 nguyên tắc bổ trợ</h2>
+            <p class="sec__part">Tác dụng thực tế</p>
+            <h2>Ứng dụng — Biến ý tưởng thành hành động</h2>
           </div>
         </div>
+        <p class="lede">
+          3 nguyên tắc bổ trợ + một lộ trình 4 tuần để bắt đầu từ số 0. Chọn triết lý Rhythmic
+          làm mặc định nếu bạn chưa biết bắt đầu từ đâu.
+        </p>
+
         <div class="bonus-grid">
           <div class="bonus">
             <h4>⚡ Cultivate Intensity</h4>
-            <p><b>Là gì:</b> Tấn công task bằng mọi nơ-ron, đặt deadline cứng ngắn hơn dự kiến (Parkinson’s Law: 1h thay vì 1,5h).</p>
+            <p><b>Là gì:</b> Tấn công task bằng mọi nơ-ron, đặt deadline cứng ngắn hơn dự kiến (Parkinson's Law: 1h thay vì 1,5h).</p>
             <p class="bonus__eff"><b>Tác dụng:</b> áp lực thời gian sinh ra sự tập trung mà sự lơi tay không bao giờ có.</p>
           </div>
           <div class="bonus">
@@ -470,32 +473,22 @@
           </div>
           <div class="bonus">
             <h4>👀 Pseudo-Depth</h4>
-            <p><b>Là gì:</b> Cảnh giác “sâu giả” — kiểm tra email nhanh giữa buổi DW.</p>
-            <p class="bonus__eff"><b>Tác dụng:</b> chỉ 1–2 phút gián đoạn cũng để lại “dư âm”, phá vòng myelin. Đừng nghĩ “chỉ liếc một cái thì không sao”.</p>
+            <p><b>Là gì:</b> Cảnh giác "sâu giả" — kiểm tra email nhanh giữa buổi DW.</p>
+            <p class="bonus__eff"><b>Tác dụng:</b> chỉ 1–2 phút gián đoạn cũng để lại "dư âm", phá vòng myelin. Đừng nghĩ "chỉ liếc một cái thì không sao".</p>
           </div>
         </div>
-      </section>
 
-      <!-- ROADMAP -->
-      <section id="roadmap" class="sec sec--alt">
-        <div class="sec__head">
-          <span class="sec__no">↳</span>
-          <div>
-            <p class="sec__part">Áp dụng</p>
-            <h2>Lộ trình 4 tuần</h2>
-          </div>
-        </div>
-        <div class="timeline">
+        <div class="timeline" style="margin-top:1.8rem;">
           <div class="tl"><div class="tl__w">Tuần 1</div><p>Chọn triết lý (mặc định Rhythmic); thiết kế ritual: địa điểm + giờ cố định.</p></div>
-          <div class="tl"><div class="tl__w">Tuần 2</div><p>Áp dụng “schedule every minute”; đo giờ DW thực tế trên lịch.</p></div>
-          <div class="tl"><div class="tl__w">Tuần 3</div><p>Áp dụng shutdown ritual; tập “ôm nhàm chán” (bỏ điện thoại khi chờ).</p></div>
-          <div class="tl"><div class="tl__w">Tuần 4</div><p>Thử 30 ngày ngừng 1 MXH; định lượng độ “sâu” cho từng task.</p></div>
+          <div class="tl"><div class="tl__w">Tuần 2</div><p>Áp dụng "schedule every minute"; đo giờ DW thực tế trên lịch.</p></div>
+          <div class="tl"><div class="tl__w">Tuần 3</div><p>Áp dụng shutdown ritual; tập "ôm nhàm chán" (bỏ điện thoại khi chờ).</p></div>
+          <div class="tl"><div class="tl__w">Tuần 4</div><p>Thử 30 ngày ngừng 1 MXH; định lượng độ "sâu" cho từng task.</p></div>
           <div class="tl tl--loop"><div class="tl__w">Liên tục</div><p>Review hàng tuần theo 4DX; cố định giờ kết thúc ngày.</p></div>
         </div>
       </section>
 
-      <!-- CRITIQUE -->
-      <section id="critique" class="sec">
+      <!-- ============ 4 · CRITICAL LENS ============ -->
+      <section id="critique" class="sec sec--alt">
         <div class="sec__head">
           <span class="sec__no">!</span>
           <div>
@@ -503,20 +496,20 @@
             <h2>Góc nhìn phản biện</h2>
           </div>
         </div>
-        <p class="lede">Sách và các bản tóm tắt thường “một chiều khen ngợi”. Đây là những điểm đáng cân nhắc.</p>
+        <p class="lede">Sách và các bản tóm tắt thường "một chiều khen ngợi". Đây là những điểm đáng cân nhắc.</p>
         <div class="crit-grid">
           <div class="crit"><span class="crit__n">01</span><p><b>Không bình đẳng về khả năng tiếp cận.</b> Cha/mẹ, người chăm sóc người thân, công việc đòi hỏi sẵn sàng liên tục (y tá, sales) khó áp dụng DW như một giáo sư có quyền tự chủ thời gian.</p></div>
-          <div class="crit"><span class="crit__n">02</span><p><b>Multitasking không luôn tệ.</b> Nghiên cứu gần đây cho thấy đôi khi multitasking tăng hiệu quả tùy chỉ số đo — phủ nhận nhận định “luôn tệ”.</p></div>
-          <div class="crit"><span class="crit__n">03</span><p><b>Thống kê “47 giây” của Mark</b> bị trích dẫn thiếu phê phán: đo bằng việc quan sát chuyển màn hình, không đo trực tiếp “dư âm nhận thức”.</p></div>
+          <div class="crit"><span class="crit__n">02</span><p><b>Multitasking không luôn tệ.</b> Nghiên cứu gần đây cho thấy đôi khi multitasking tăng hiệu quả tùy chỉ số đo — phủ nhận nhận định "luôn tệ".</p></div>
+          <div class="crit"><span class="crit__n">03</span><p><b>Thống kê "47 giây" của Mark</b> bị trích dẫn thiếu phê phán: đo bằng việc quan sát chuyển màn hình, không đo trực tiếp "dư âm nhận thức".</p></div>
           <div class="crit"><span class="crit__n">04</span><p><b>Nghiên cứu gốc của Leroy</b> dùng cỡ mẫu nhỏ, bài tập lab (toán, đọc) → chưa chắc tổng quát cho công việc tri thức thực tế.</p></div>
           <div class="crit"><span class="crit__n">05</span><p><b>Khuynh hướng nhị phân</b> (deep = tốt, shallow = xấu). Thực tế nhiều vai trò cần cả hai một cách có chủ đích.</p></div>
           <div class="crit"><span class="crit__n">06</span><p><b>Giai đoạn sự nghiệp:</b> Newport thừa nhận DW phù hợp đầu/giữa sự nghiệp để xây kỹ năng; cuối sự nghiệp có thể nghiêng về shallow (mentor, quản lý).</p></div>
         </div>
       </section>
 
-      <!-- CLOSING -->
+      <!-- ============ 5 · CLOSING ============ -->
       <section class="closing">
-        <blockquote class="closing__q">“I’ll live the focused life… because it’s the best kind there is.”</blockquote>
+        <blockquote class="closing__q">"I'll live the focused life… because it's the best kind there is."</blockquote>
         <p class="closing__t">Tôi sẽ sống cuộc đời tập trung… vì đó là kiểu cuộc đời tốt nhất.</p>
 
         <details class="sources">
@@ -538,6 +531,6 @@
     </main>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="../../assets/book.js"></script>
 </body>
 </html>
