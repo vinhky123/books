@@ -20,6 +20,19 @@ const BOOKS = [
     ready: true,
   },
 
+  {
+    slug: 'hyperfocus',
+    title: 'Hyperfocus',
+    titleVi: 'Siêu tập trung',
+    author: 'Chris Bailey',
+    year: 2018,
+    tag: 'Năng suất',
+    glyph: '🎯',
+    blurb: 'Quản lý sự chú ý, không phải thời gian — Hyperfocus + Scatterfocus, hai chế độ não cần rèn.',
+    cover: { from: '#0d9488', to: '#0891b2' },
+    ready: true,
+  },
+
   /* ---------- Mẫu: thêm sách mới theo cấu trúc này ----------
   {
     slug: 'atomic-habits',

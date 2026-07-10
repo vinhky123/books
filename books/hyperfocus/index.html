@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyperfocus — Tổng hợp trực quan</title>
+  <meta name="description" content="Tổng hợp trực quan, có hệ thống, cuốn Hyperfocus của Chris Bailey — quản lý sự chú ý, không phải thời gian." />
+
+  <!-- Per-book accent: teal (để phân biệt với Deep Work tím) -->
+  <style>
+    :root { --accent: #0d9488; --accent-d: #0f766e; --accent-tint: #ccfbf1; }
+  </style>
+
+  <link rel="stylesheet" href="../../assets/book.css" />
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="layout">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__brand">
+        <span class="sidebar__dot"></span>
+        <span>Hyperfocus</span>
+        <button class="sidebar__close" id="sidebarClose" aria-label="Đóng menu">✕</button>
+      </div>
+
+      <a href="../../index.html" class="sidebar__back">← Thư viện sách</a>
+
+      <nav class="tree" id="tree">
+        <p class="tree__part">Khung</p>
+        <a href="#frame" class="tree__l1">30 giây — Các ý chính</a>
+
+        <p class="tree__part">Khái niệm</p>
+        <a href="#concept-1" class="tree__l1">1 · Attentional Space</a>
+        <a href="#concept-2" class="tree__l1">2 · Hyperfocus</a>
+        <a href="#concept-3" class="tree__l1">3 · Quản lý phân tâm</a>
+        <a href="#concept-4" class="tree__l1">4 · Scatterfocus</a>
+        <a href="#concept-5" class="tree__l1">5 · Mô hình "Dots"</a>
+        <a href="#concept-6" class="tree__l1">6 · Tổng hợp</a>
+
+        <p class="tree__part">Áp dụng & Phản biện</p>
+        <a href="#application" class="tree__l1">Ứng dụng thực tế</a>
+        <a href="#critique" class="tree__l1">Góc nhìn phản biện</a>
+      </nav>
+
+      <a href="#top" class="sidebar__top">↑ Lên đầu trang</a>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main" id="top">
+
+      <div class="mobilebar">
+        <button class="mobilebar__btn" id="menuBtn">☰ Mục lục</button>
+      </div>
+
+      <!-- ============ 0 · IDENTITY HERO ============ -->
+      <section class="hero">
+        <div class="hero__inner">
+          <p class="hero__kicker">Tổng hợp · có hệ thống · đã cross-check</p>
+          <h1 class="hero__title">Hyperfocus</h1>
+          <p class="hero__titlevi">Siêu tập trung</p>
+          <p class="hero__sub">Chất lượng sự chú ý quyết định chất lượng cuộc đời bạn.</p>
+          <p class="hero__meta">Chris Bailey · 2018 · Năng suất / Tâm lý học</p>
+
+          <div class="hero__formula">
+            <span class="hf__label">Luận điểm trung tâm</span>
+            <div class="hf__eq">
+              <span>Năng suất</span>
+              <span class="hf__op">=</span>
+              <span>Quản lý</span>
+              <span class="hf__accent">sự chú ý</span>
+              <span class="hf__op">≠</span>
+              <span>Quản lý thời gian</span>
+            </div>
+            <p class="hf__note">Não có <b>hai chế độ</b> cần rèn luyện có chủ đích: Hyperfocus (tập trung sâu) + Scatterfocus (vagrant mind có chủ đích).</p>
+          </div>
+
+          <p class="hero__intro">
+            Trang này tổ chức cuốn sách theo cấu trúc mới: phần <b>30 giây</b> cho bản đồ
+            ý tưởng, các <b>Concept</b> đi sâu từng khái niệm (kèm vì sao + bằng chứng),
+            <b>Ứng dụng</b> gom hành động cụ thể, và <b>Phản biện</b> cho góc nhìn cân bằng.
+            Dùng mục lục bên trái để định hướng.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 1 · 30-SECOND FRAME ============ -->
+      <section id="frame" class="frame">
+        <div class="frame__head">
+          <span class="frame__no">◎</span>
+          <div>
+            <p class="frame__part">Bản đồ ý tưởng</p>
+            <h2>30 giây — Các ý chính</h2>
+          </div>
+        </div>
+        <ol class="frame__list">
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-1">Attentional Space</a></b>
+              <span>Ý thức chỉ xử lý ~40 bit/giây — rất hạn hẹp, phải bảo vệ.</span>
+            </div>
+            <span class="frame__tag">Nền tảng</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-2">Hyperfocus</a></b>
+              <span>4 giai đoạn: chọn → loại distraction → tập trung → kéo lại khi lạc.</span>
+            </div>
+            <span class="frame__tag">Chế độ sâu</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-3">Quản lý phân tâm</a></b>
+              <span>Phân biệt interruption (bị ngắt) vs distraction (tự gây ra).</span>
+            </div>
+            <span class="frame__tag">Phòng thủ</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-4">Scatterfocus</a></b>
+              <span>Vagrant mind có chủ đích = sáng tạo + phục hồi năng lượng.</span>
+            </div>
+            <span class="frame__tag">Chế độ rộng</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-5">Mô hình "Dots"</a></b>
+              <span>Sáng tạo = nối các "dot"; chất lượng dot quyết định kết nối.</span>
+            </div>
+            <span class="frame__tag">Sáng tạo</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-6">Tổng hợp</a></b>
+              <span>Hạnh phúc + năng lượng + môi trường khuếch đại cả hai chế độ.</span>
+            </div>
+            <span class="frame__tag">Hệ sinh thái</span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ 2 · CONCEPT DEEP-DIVES ============ -->
+
+      <!-- Concept 1 — Attentional Space -->
+      <section id="concept-1" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">1</span>
+          <div>
+            <p class="concept__part">Chương 2 · Nền tảng</p>
+            <h2>Attentional Space — Không gian chú ý</h2>
+          </div>
+        </div>
+        <p class="concept__def">Dung lượng ý thức có hạn bất ngờ — quản lý tốt "không gian" này là chìa khóa năng suất.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              <b>Attentional space</b> = dung lượng trí óc sẵn có trong từng khoảnh khắc (tương đương working memory). Não thu <b>~11 triệu bit</b> thông tin/giây nhưng ý thức chỉ xử lý <b>~40 bit</b>. Giải mã một cuộc hội thoại đã ngốn khoảng <i>50%</i> dung lượng.<br><br>
+              Quy tắc vừa khít: vài task thói quen nhỏ; HOẶC một task phức tạp + một thói quen; HOẶC chỉ một task phức tạp. Multitasking chỉ chạy được với task thói quen/độ phức tạp thấp.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Não tuy chỉ <b>2–3% khối lượng</b> cơ thể nhưng tiêu <b>~20% calo</b>. Dung lượng ý thức là tài nguyên khan hiếm về mặt sinh học — sự khan hiếm này là lý do gốc rễ mọi phương pháp "quản lý chú ý".</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              Timothy Wilson (<i>Strangers to Ourselves</i>) — tỷ lệ 11 triệu/40 bit.<br>
+              Mihaly Csikszentmihalyi — giải mã hội thoại tiêu ~50% attentional space.<br>
+              Working memory trung bình <b>~4 chunk</b>.<br>
+              Sophie Leroy — "attention residue": ý nghĩ thừa từ task trước làm nghẹt attentional space sau khi chuyển task.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Đây là <i>nền</i> cho mọi khái niệm sau. Hyperfocus (Concept 2) là cách <b>lấp đầy</b> attentional space bằng một task; Scatterfocus (Concept 4) là cách <b>giải phóng</b> nó để phục hồi. Trùng khớp trực tiếp với "Attention Residue" ở <a href="../deep-work/index.html#concept-4">Deep Work</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 2 — Hyperfocus -->
+      <section id="concept-2" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">2</span>
+          <div>
+            <p class="concept__part">Chương 3 · Chế độ sâu</p>
+            <h2>Hyperfocus — Siêu tập trung</h2>
+          </div>
+        </div>
+        <p class="concept__def">Giữ <b>một</b> đối tượng chú ý quan trọng, phức tạp trong nhận thức khi làm việc — tiền đề của trạng thái "flow".</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              <b>4 giai đoạn Hyperfocus:</b><br>
+              (1) Chọn <i>một</i> đối tượng chú ý có ý nghĩa.<br>
+              (2) Loại bỏ mọi distraction trong/ngoài.<br>
+              (3) Tập trung trong khoảng thời gian định sẵn.<br>
+              (4) Kéo sự chú ý về mỗi khi tâm trí đi lang thang.<br><br>
+              Quy tắc bất di bất dịch: <b>chỉ một task</b> có ý nghĩa được phép chiếm attentional space.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>"Intention must precede attention" — ý định mở đường cho chú ý. Không có ý định cụ thể, não tự rơi vào chế độ autopilot (40% hành vi là thói quen) và trôi vào quadrant sai. Càng bận, càng <i>cần</i> Hyperfocus vì attentional space càng dễ bị pha loãng.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              Gollwitzer &amp; Brandstätter (1997): tỷ lệ hoàn thành project khó (Christmas) tăng từ <b>22% → 62%</b> khi biến thành "implementation intention" cụ thể.<br>
+              Killingsworth &amp; Gilbert — tâm trí đi lang thang <b>~47%</b> thời gian thức.<br>
+              Mất <b>~22 phút</b> để quay lại task sau interruption ngoài, <b>~29 phút</b> sau interruption trong.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Hyperfocus ≈ <a href="../deep-work/index.html#rule-1">Deep Work</a> của Newport — cùng nguyên lý một task, không xao nhãng. Điểm khác: Bailey nhấn mạnh <i>tính chiến thuật</i> (Rule of 3, awareness chime), Newport nhấn mạnh <i>triết lý</i>. Cả hai gọi Hyperfocus/Deep Work là tiền đề của <i>flow</i> (Csikszentmihalyi).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 3 — Distractions -->
+      <section id="concept-3" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">3</span>
+          <div>
+            <p class="concept__part">Chương 4 · Phòng thủ</p>
+            <h2>Quản lý phân tâm — Interruption vs Distraction</h2>
+          </div>
+        </div>
+        <p class="concept__def">Phân biệt rõ hai loại gián đoạn — kẻ thù stealth là loại ta <i>tự gây ra</i>.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              <b>Interruption</b> — bị ngắt từ bên ngoài (ai đó gọi, thông báo bật lên). Xảy ra <i>với</i> ta.<br>
+              <b>Distraction</b> — ta <i>tự</i> gây ra (mở MXH, kiểm tra email vì buồn chán). Nguy hiểm hơn vì vô thức và phổ biến hơn.<br><br>
+              Mở máy tính có điện thoại cạnh đó: ta chỉ tập trung <b>~40 giây</b> trước khi phân tâm; có khung chat mở: <b>~35 giây</b>.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Mỗi lần attentional space bị xâm chiếm, phải trả "chi phí đổi ngữ cảnh" (cf. attention residue). Điện thoại cho một <i>dòng dopamine nhỏ liên tục</i> khi não kháng cự task — ta tự đoạt lấy sự gián đoạn vì nó "thoải mái" hơn.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>Nghiên cứu Gloria Mark — con số 40 giây / 35 giây trên. Mở văn phòng (open office): nhân viên <b>tự phân tâm nhiều hơn 64%</b> so với văn phòng kín (Mark &amp; Czerwinski).</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Đối chiếu <a href="../deep-work/index.html#concept-4">Deep Work</a>: cả hai sách cùng chỉ ra attention residue là cơ chế tổn thương. Bailey thêm nhãn phân biệt <i>interruption/distraction</i>; Newport thêm chiến thuật "batch" và "shutdown ritual" để giảm cả hai.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 4 — Scatterfocus -->
+      <section id="concept-4" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">4</span>
+          <div>
+            <p class="concept__part">Chương 6–7 · Chế độ rộng</p>
+            <h2>Scatterfocus — Vagrant mind có chủ đích</h2>
+          </div>
+        </div>
+        <p class="concept__def">Để tâm trí đi lang thang <b>có chủ đích</b> — đây là chế độ sáng tạo và phục hồi, phần <i>mới nhất</i> của sách.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              Scatterfocus = hướng sự chú ý <i>vào trong</i>, để các mạng não mặc định (default network) tự do kết nối ý tưởng. Nghịch lý: nghỉ ngơi không phải lười biếng — nó <b>trao đổi thời gian lấy năng lượng</b>.<br><br>
+              Nghỉ <i>thực sự</i> phải: ít nỗ lực, thói quen, vui vẻ ("pleasurably effortless"). Kiểm tra email/MXH <b>không</b> tính nghỉ.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Hyperfocus tiêu hao năng lượng; không có phục hồi, 3 chỉ số suy giảm: <b>độ dài tập trung, khả năng trụ, độ chủ ý</b>. Mơ được Bailey gọi là "scatterfocus trên steroid" — REM ngủ tự nối các ý tưởng sâu.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              Ngủ đủ: attentional space có thể lớn hơn tới <b>58%</b>; thiếu ngủ thu nhỏ <b>~60%</b>.<br>
+              Quy tắc "52/17" (DeskTime): 10% người năng suất nhất làm ~52 phút, nghỉ ~17.<br>
+              Chu kỳ ultradian ~90 phút. "Forest bathing": giải vấn đề sáng tạo tốt hơn tới <b>50%</b>, hormone stress giảm ~16%.<br>
+              <i>Đánh giá 1h ngủ mất = mất 2h năng suất hôm sau</i> (rule of thumb của Bailey).
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Đây là <b>phần khác biệt nhất</b> so với <a href="../deep-work/index.html">Deep Work</a>. Newport có nói "Be Lazy" nhưng Bailey dành trọn nửa sách cho nó. Là phần phê bình khen ngợi nhiều nhất — và cũng là phần bị gọi "hand-wavy" nhất.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 5 — Dots -->
+      <section id="concept-5" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">5</span>
+          <div>
+            <p class="concept__part">Chương 8–9 · Sáng tạo</p>
+            <h2>Mô hình "Dots" — Thu thập &amp; Nối</h2>
+          </div>
+        </div>
+        <p class="concept__def">Sáng tạo chủ yếu là <b>nối các "dot"</b> (mảnh thông tin) — và chất lượng dot bạn thu quyết định kết nối bạn tạo.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              <b>Dot</b> = bất kỳ mảnh thông tin nào bạn giữ trong tâm trí. Sáng tạo = nối dot trong scatterfocus.<br><br>
+              <b>4 loại thông tin:</b> <i>useful</i> (đặc, hành động — journal, phi hư cấu), <i>balanced</i> (tiện ích + giải trí — tiểu thuyết, phim tài liệu), <i>entertaining</i> ("đồ ăn vặt" — TV, MXH), <i>trashy</i>.<br>
+              <b>Zeigarnik Effect</b>: tâm trí ám task chưa xong — tốt cho scatterfocus (để loop mở, tiềm thức tiếp tục).
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Focus luôn "lọc qua" kiến thức đã có. Chuyên gia <i>chunk</i> thông tin (vd pianist chuyên nghiệp) nên tốn ít attentional space hơn → có chỗ thừa để sáng tạo. Intuition = "hành động trên thông tin nhớ nhưng không truy xuất có ý thức".</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>Default network từng bị coi là "nhiễu nền" rồi mới được phát hiện là máy sáng tạo. Anecdote: Archimedes &amp; bồn tắm, Newton &amp; quả táo, Feynman viết phương trình ở quán bar. Edison &amp; Dalí ngủ gật cầm vật rơi đánh thức ở ranh giới ngủ — kích insight.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Nối trực tiếp với Scatterfocus (Concept 4): scatterfocus <i>cung cấp không gian</i>, dots <i>cung cấp nguyên liệu</i>. Cả hai cộng hưởng tạo sáng tạo. Nguyên tắc "we are what we consume" — đối chiếu "Cultivate Intensity" của <a href="../deep-work/index.html#application">Deep Work</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 6 — Synthesis -->
+      <section id="concept-6" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">6</span>
+          <div>
+            <p class="concept__part">Chương 10 · Hệ sinh thái</p>
+            <h2>Tổng hợp — Khuếch đại cả hai chế độ</h2>
+          </div>
+        </div>
+        <p class="concept__def">Hyperfocus + Scatterfocus không đứng riêng — hạnh phúc, năng lượng, chất kích thích và môi trường quyết định hiệu lực của cả hai.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              <b>Hạnh phúc thật</b> (không phải positive thinking ép buộc) mở rộng attentional space; tâm trạng tiêu cực thu hẹp nó.<br>
+              <b>Biological Prime Time</b>: xếp việc giá trị cao vào đỉnh năng lượng cá nhân.<br>
+              <b>Rượu</b> tăng sáng tạo, giảm focus; <b>caffeine</b> ngược lại (hiệu quả tới ~200mg, trên ~400mg phản tác dụng).<br>
+              <b>Văn phòng mở</b>: tăng gián đoạn + tự phân tâm, nhưng tốt cho hợp tác.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Attentional space co giãn theo trạng thái sinh học và môi trường — không cố định. Tối ưu chế độ sâu/ rộng mà bỏ qua nền tảng sinh học thì như đổ nước vào ly thủng.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>Shawn Achor (<i>The Happiness Advantage</i>): người hạnh phúc năng suất hơn <b>~31%</b>. Mark &amp; Czerwinski — open office tự phân tâm <b>+64%</b>. Paper "Bored Mondays and focused afternoons": chu kỳ chú ý theo tuần.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Đóng vai trò như "3 nguyên tắc bổ trợ" (<a href="../deep-work/index.html#application">Cultivate Intensity / Be Lazy</a>) trong Deep Work — cùng thông điệp: cá nhân hóa, đo lường, không áp dụng máy móc.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 3 · APPLICATION LAB ============ -->
+      <section id="application" class="sec">
+        <div class="sec__head">
+          <span class="sec__no">▶</span>
+          <div>
+            <p class="sec__part">Tác dụng thực tế</p>
+            <h2>Ứng dụng — Công cụ ROI cao nhất</h2>
+          </div>
+        </div>
+        <p class="lede">
+          Bailey tự gọi thể loại là "science-help". Đây là các chiến thuật được phê bình khen ngợi
+          nhiều nhất — áp dụng trước, đo lường, rồi mới mở rộng.
+        </p>
+
+        <div class="ticks">
+          <div class="tick"><b>Rule of 3</b><span>Mỗi sáng, chọn <b>3 việc</b> quan trọng nhất muốn hoàn thành trong ngày. <i>Tác dụng:</i> ép não ưu tiên thay vì phản ứng — dựa trên Gollwitzer: ý định cụ thể tăng hoàn thành 22%→62%.</span></div>
+          <div class="tick"><b>Hourly Awareness Chime</b><span>Hẹn giờ mỗi giờ: hỏi "mình có đang chạy autopilot không?". <i>Tác dụng:</i> meta-awareness ngắt trôi tự phát, kéo sự chú ý về ý định.</span></div>
+          <div class="tick"><b>Distraction-free ritual</b><span>Điện thoại sang phòng khác, đóng tab, khung giờ cố định, "distractions list" ghi ý stray. <i>Tác dụng:</i> dời reliance từ ý chí sang môi trường — giảm interruption 40s.</span></div>
+          <div class="tick"><b>Implementation intentions</b><span>Thay "tôi sẽ tập thể dục" bằng "tôi sẽ tập thể dục lúc 7h ở phòng gym". <i>Tác dụng:</i> cụ thể hóa WHEN+WHERE khiến ý định tự kích hoạt.</span></div>
+          <div class="tick"><b>Break timing</b><span>Nghỉ <b>≥ 90 phút</b> một lần, <b>~15 phút/giờ</b> làm việc. Mục tiêu 52 làm / 17 nghỉ. <i>Tác dụng:</i> tuân chu kỳ ultradian, chống suy giảm 3 chỉ số chú ý.</span></div>
+          <div class="tick"><b>Protect sleep</b><span>Ngủ đủ là công cụ focus mạnh nhất: mất 1h ngủ ≈ mất 2h năng suất hôm sau. <i>Tác dụng:</i> attentional space lớn hơn tới 58% khi ngủ đủ.</span></div>
+          <div class="tick"><b>Scatterfocus có chủ đích</b><span>Đi bộ không điện thoại, tắm, "sleep on it". Đừng kiểm tra MXH khi nghỉ. <i>Tác dụng:</i> kích default network → sáng tạo + phục hồi thật sự.</span></div>
+        </div>
+
+        <div class="callout">
+          <div class="callout__t">🧪 Benchmark 2 tuần</div>
+          <p>Nếu sau 2 tuần bạn <b>duy trì được 1 khối không phân tâm/ngày</b>, cuốn sách đã hoàn vốn. Nếu scatterfocus break vẫn cảm thấy "lãng phí" — đọc lại Chương 7: nghỉ = trao đổi thời gian lấy năng lượng.</p>
+        </div>
+      </section>
+
+      <!-- ============ 4 · CRITICAL LENS ============ -->
+      <section id="critique" class="sec sec--alt">
+        <div class="sec__head">
+          <span class="sec__no">!</span>
+          <div>
+            <p class="sec__part">Cân bằng</p>
+            <h2>Góc nhìn phản biện</h2>
+          </div>
+        </div>
+        <p class="lede">Sách được đón nhận tích cực (NYT, Publishers Weekly, Goodreads 3.88/5) nhưng có những điểm đáng cân nhắc — đúc kết từ phê bình chuyên nghiệp &amp; độc giả.</p>
+        <div class="crit-grid">
+          <div class="crit"><span class="crit__n">01</span><p><b>Lặp và dài.</b> Phê bình phổ biến nhất: ý chính có thể cô đặc dưới 50 trang. Nhiều độc giả thấy padding đáng kể.</p></div>
+          <div class="crit"><span class="crit__n">02</span><p><b>Không mới so với Deep Work.</b> Một nửa đầu (Hyperfocus) trùng khái niệm với Cal Newport 2016. Nhiều người khuyến nghị đọc Deep Work thay.</p></div>
+          <div class="crit"><span class="crit__n">03</span><p><b>Dựa trên nghiên cứu người khác.</b> Bailey là popularizer, không phải nhà nghiên cứu — dùng self-experimentation + synthesis. Một số thống kê bị trích rời ngữ cảnh.</p></div>
+          <div class="crit"><span class="crit__n">04</span><p><b>Thống kê bị tranh cãi.</b> "11 triệu/40 bit" (Wilson), "47%" lang thang tâm trí (Killingsworth — correlational, không nhân quả), "58% attentional space", "2h/1h ngủ" (chính Bailey/chế giễu "pseudoscientific").</p></div>
+          <div class="crit"><span class="crit__n">05</span><p><b>Nửa Scatterfocus "hand-wavy".</b> Phản ứng phân cực: khen là phần mới nhất, chê là mơ hồ, ít chiến thuật sắc so với nửa Hyperfocus.</p></div>
+          <div class="crit"><span class="crit__n">06</span><p><b>"Hyperfocus" là thuật ngữ ADHD.</b> Với người ADHD, nó mô tả trạng thái <i>không kiểm soát được</i> — mang nghĩa tiêu cực. Bailey mượn lại với nghĩa tích cực có thể gây hiểu lầm.</p></div>
+          <div class="crit"><span class="crit__n">07</span><p><b>Wilson 2014 "electric shock" study</b> (người thích tự điện giật hơn ngồi nghĩ) đã bị bình luận sau đó thách thức — đừng coi là kết luận chốt.</p></div>
+        </div>
+      </section>
+
+      <!-- ============ 5 · CLOSING ============ -->
+      <section class="closing">
+        <blockquote class="closing__q">"Attention without intention is wasted energy."</blockquote>
+        <p class="closing__t">Sự chú ý không có ý định là năng lượng bị lãng phí.</p>
+
+        <p class="closing__t" style="margin-top:-.8rem; font-style:italic;">"The best time to take a break is before you need to."</p>
+
+        <details class="sources">
+          <summary>Nguồn tham khảo</summary>
+          <ul>
+            <li>Chris Bailey — <i>Hyperfocus</i> (Viking/Penguin, 2018).</li>
+            <li>Killingsworth &amp; Gilbert — "A wandering mind is an unhappy mind" (<i>Science</i>, 2010).</li>
+            <li>Gollwitzer &amp; Brandstätter — Implementation intentions (1997).</li>
+            <li>Sophie Leroy — Attention residue (2009).</li>
+            <li>Timothy Wilson — <i>Strangers to Ourselves</i>.</li>
+            <li>Gloria Mark &amp; Mary Czerwinski — attention-switching research.</li>
+            <li>Shawn Achor — <i>The Happiness Advantage</i>.</li>
+            <li>Đối chiếu: Cal Newport — <a href="../deep-work/index.html">Deep Work</a> (2016).</li>
+          </ul>
+        </details>
+      </section>
+
+      <footer class="footer">
+        <p>Visual tổng hợp cuốn <em>Hyperfocus</em> (Chris Bailey, 2018) · Đã cross-check &amp; đính chính nguồn.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../../assets/book.js"></script>
+</body>
+</html>
