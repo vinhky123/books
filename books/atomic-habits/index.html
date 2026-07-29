@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atomic Habits — Tổng hợp trực quan</title>
+  <meta name="description" content="Tổng hợp trực quan, có hệ thống, cuốn Atomic Habits của James Clear — 4 Quy luật thói quen, kèm phản biện về khoa học thật (Wood, Milkman) và các giai thoại thiên kiến sống sót." />
+
+  <!-- Per-book accent: xanh growth (lũy tiến) — phân biệt Deep Work tím, Hyperfocus teal, 4000 Weeks nâu đỏ -->
+  <style>
+    :root { --accent: #16a34a; --accent-d: #15803d; --accent-tint: #dcfce7; }
+  </style>
+
+  <link rel="stylesheet" href="../../assets/book.css" />
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="layout">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__brand">
+        <span class="sidebar__dot"></span>
+        <span>Atomic Habits</span>
+        <button class="sidebar__close" id="sidebarClose" aria-label="Đóng menu">✕</button>
+      </div>
+
+      <a href="../../index.html" class="sidebar__back">← Thư viện sách</a>
+
+      <nav class="tree" id="tree">
+        <p class="tree__part">Khung</p>
+        <a href="#frame" class="tree__l1">30 giây — Các ý chính</a>
+
+        <p class="tree__part">Khái niệm</p>
+        <a href="#concept-1" class="tree__l1">1 · Vòng lặp thói quen</a>
+        <a href="#concept-2" class="tree__l1">2 · 4 Quy luật</a>
+        <a href="#concept-3" class="tree__l1">3 · Hệ thống &gt; Mục tiêu</a>
+        <a href="#concept-4" class="tree__l1">4 · Bản sắc</a>
+        <a href="#concept-5" class="tree__l1">5 · Thặng dư nhỏ &amp; lũy tiến</a>
+        <a href="#concept-6" class="tree__l1">6 · Môi trường &gt; Ý chí</a>
+
+        <p class="tree__part">Áp dụng &amp; Phản biện</p>
+        <a href="#application" class="tree__l1">Ứng dụng thực tế</a>
+        <a href="#critique" class="tree__l1">Góc nhìn phản biện</a>
+      </nav>
+
+      <a href="#top" class="sidebar__top">↑ Lên đầu trang</a>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main" id="top">
+
+      <div class="mobilebar">
+        <button class="mobilebar__btn" id="menuBtn">☰ Mục lục</button>
+      </div>
+
+      <!-- ============ 0 · IDENTITY HERO ============ -->
+      <section class="hero">
+        <div class="hero__inner">
+          <p class="hero__kicker">Tổng hợp · đã đối chiếu khoa học thói quen thật · có đính chính nguồn</p>
+          <h1 class="hero__title">Atomic Habits</h1>
+          <p class="hero__titlevi">Nguyên lý tối giản — Thói quen nguyên tử</p>
+          <p class="hero__sub">Một sự tổng hợp được thiết kế xuất sắc — nhưng là tác phẩm của một nhà viết, không phải nhà khoa học; thổi phồng độ chính xác khoa học trong khi dựa nhiều vào giai thoại mang thiên kiến sống sót.</p>
+          <p class="hero__meta">James Clear · 2018 · Phát triển bản thân / Hành vi</p>
+
+          <div class="hero__formula">
+            <span class="hf__label">Luận điểm trung tâm</span>
+            <div class="hf__eq">
+              <span class="hf__accent">Hệ thống</span>
+              <span class="hf__op">&gt;</span>
+              <span>Mục tiêu</span>
+              <span class="hf__op">·</span>
+              <span>Thay đổi nhỏ × lặp lại</span>
+              <span class="hf__op">→</span>
+              <span>bản sắc</span>
+            </div>
+            <p class="hf__note">Thay đổi bền vững đến từ <b>quy trình có thể lặp lại</b>, không phải mục tiêu. Clear khung hoá thành một "hệ điều hành" dễ nhớ: vòng lặp thói quen 4 bước và 4 Quy luật.</p>
+          </div>
+
+          <p class="hero__intro">
+            Trang này tổ chức cuốn sách theo cấu trúc cố định: phần <b>30 giây</b> cho bản đồ ý tưởng,
+            các <b>Concept</b> đi sâu từng khái niệm (kèm vì sao + bằng chứng thật), <b>Ứng dụng</b> gom
+            hành động, và <b>Phản biện</b> — đặc biệt quan trọng vì cuốn này <i>dễ áp dụng nhưng có nhiều
+            tuyên bố khoa học bị thổi phồng</i>. Dùng mục lục bên trái để định hướng.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 1 · 30-SECOND FRAME ============ -->
+      <section id="frame" class="frame">
+        <div class="frame__head">
+          <span class="frame__no">◎</span>
+          <div>
+            <p class="frame__part">Bản đồ ý tưởng</p>
+            <h2>30 giây — Các ý chính</h2>
+          </div>
+        </div>
+        <ol class="frame__list">
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-1">Vòng lặp thói quen</a></b>
+              <span>Cue → Craving → Response → Reward. Clear thêm bước "Craving" vào vòng lặp 3 bước của Duhigg.</span>
+            </div>
+            <span class="frame__tag">Nền tảng</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-2">4 Quy luật</a></b>
+              <span>Rõ ràng / Hấp dẫn / Dễ dàng / Thỏa mãn — đảo ngược cả 4 để phá thói quen xấu.</span>
+            </div>
+            <span class="frame__tag">Hệ điều hành</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-3">Hệ thống &gt; Mục tiêu</a></b>
+              <span>Kết quả ← Quy trình ← Bản sắc. Người đạt cùng mục tiêu là người có hệ thống tốt hơn.</span>
+            </div>
+            <span class="frame__tag">Đổi góc nhìn</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-4">Bản sắc</a></b>
+              <span>"Mình LÀ người..." thay vì "mình muốn...". Ý tưởng nổi nhất — nhưng lại ít được khoa học ủng hộ nhất.</span>
+            </div>
+            <span class="frame__tag">Động cơ?</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-5">Thặng dư nhỏ &amp; lũy tiến</a></b>
+              <span>1%/ngày ≈ 37×. Ẩn dụ truyền cảm hứng ngụy trang dạng toán — đừng hiểu theo nghĩa đen.</span>
+            </div>
+            <span class="frame__tag">Toán học?</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-6">Môi trường &gt; Ý chí</a></b>
+              <span>Bối cảnh luôn thắng ý chí — đây mới là đòn bẩy được nghiên cứu ủng hộ mạnh nhất.</span>
+            </div>
+            <span class="frame__tag">Đòn bẩy thật</span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ 2 · CONCEPT DEEP-DIVES ============ -->
+
+      <!-- Concept 1 — Habit Loop -->
+      <section id="concept-1" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">1</span>
+          <div>
+            <p class="concept__part">Nền tảng</p>
+            <h2>Vòng lặp thói quen (Habit Loop)</h2>
+          </div>
+        </div>
+        <p class="concept__def">Mọi thói quen — tốt hay xấu — chạy theo bốn bước: Gợi ý → Thèm muốn → Phản ứng → Phần thưởng.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              <b>Cue</b> (gợi ý — kích hoạt), <b>Craving</b> (thèm muốn — động lực), <b>Response</b> (phản ứng —
+              hành vi thật), <b>Reward</b> (phần thưởng — ghi nhớ). Clear <b>bổ sung bước Craving</b> vào
+              vòng lặp 3 bước (Cue–Routine–Reward) của Charles Duhigg — tách "gì kích hoạt" khỏi "vì sao ta muốn".
+              Vòng lặp này là khung cho cả 4 Quy luật ở Concept 2.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Cơ chế thần kinh: thói quen là hành vi tự động hoá để tiết kiệm năng lượng — não ghi nhận phần thưởng rồi "đóng gói" chuỗi hành vi thành phản xạ theo gợi ý. Vì tự động, nó chạy <b>dưới ngưỡng ý thức</b> — đó là lý do đơn thuần "quyết tâm" không đủ; phải thiết kế lại chính vòng lặp.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              Wendy Wood (USC) — <b>~43%</b> hành động hằng ngày là theo thói quen, không phải quyết định.<br>
+              Charles Duhigg — <i>The Power of Habit</i> (2012): vòng lặp 3 bước gốc.<br>
+              <span class="alert">Cross-check:</span> ranh giới "thói quen" (tự động) vs "hành vi hướng mục tiêu" (cần nỗ lực) quan trọng — xem Phản biện #03.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Đây là <i>cột sống</i> của toàn bộ sách. Mỗi bước tương ứng một Quy luật (C2); môi trường (C6) tác động chủ yếu lên bước <b>Cue</b> và <b>Response</b>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 2 — Four Laws -->
+      <section id="concept-2" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">2</span>
+          <div>
+            <p class="concept__part">Hệ điều hành</p>
+            <h2>4 Quy luật — Tạo &amp; phá thói quen</h2>
+          </div>
+        </div>
+        <p class="concept__def">Mỗi bước của vòng lặp ứng một quy luật: làm cho gợi ý <b>rõ ràng</b>, thèm muốn <b>hấp dẫn</b>, phản ứng <b>dễ dàng</b>, phần thưởng <b>thỏa mãn</b> — đảo ngược cả bốn để phá thói quen xấu.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              <b>1 · Rõ ràng</b> (Cue): ý định thực thi ("tôi sẽ [X] lúc [giờ] tại [nơi]"), xếp chồng thói quen ("sau [thói quen cũ], tôi sẽ [mới]"), thiết kế môi trường.<br>
+              <b>2 · Hấp dẫn</b> (Craving): gom nhóm cám dỗ (temptation bundling); vào cộng đồng nơi hành vi là chuẩn mực.<br>
+              <b>3 · Dễ dàng</b> (Response): giảm ma sát, quy tắc 2 phút, lặp nhiều lần.<br>
+              <b>4 · Thỏa mãn</b> (Reward): củng cố tức thì, theo dõi thói quen, "không bao giờ bỏ lỡ 2 lần".<br>
+              <b>Phá thói xấu:</b> đảo ngược — ẩn / không hấp dẫn / khó / không thỏa mãn.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Cấu trúc 4×2 (xây/phá) biến vòng lặp trừu tượng thành <b>bảng tra nhanh</b> — đây là "hệ điều hành dễ nhớ" mà giới phê bình công nhận là sức mạnh thật của sách. Càng giảm ma sát ở bước Response (Quy luật 3), càng ít phụ thuộc ý chí — đúng cơ chế tự động hoá của C1.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              <b>Ý định thực thi</b> — chiến thuật lặp thành công nhất: meta-analysis Gollwitzer &amp; Sheeran (94 nghiên cứu, &gt;8.000 người) cho hiệu ứng trung bình–lớn <b>d ≈ 0,65</b>.<br>
+              <b>Gom nhóm cám dỗ</b> — Milkman et al. (2014): lượt đến phòng tập <b>+29–51%</b> (hiệu ứng giảm dần).<br>
+              <b>"21 ngày"</b> — Clear dẫn đúng Lally et al. (2010): trung vị <b>66 ngày</b>, dao động 18–254.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Quy luật 1 &amp; 3 là đòn bẩy thật (được C6 đào sâu); Quy luật 4 ("không bỏ lỡ 2 lần") được Lally ủng hộ. Các chiến thuật cụ thể nằm ở phần <a href="#application">Ứng dụng</a>. Trùng nguyên lý ý định cụ thể với <a href="../hyperfocus/index.html#concept-2">Hyperfocus (Rule of 3)</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 3 — System over Goals -->
+      <section id="concept-3" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">3</span>
+          <div>
+            <p class="concept__part">Đổi góc nhìn #1</p>
+            <h2>Hệ thống &gt; Mục tiêu (System over Goals)</h2>
+          </div>
+        </div>
+        <p class="concept__def">Người đạt cùng một mục tiêu là người có hệ thống tốt hơn — mục tiêu chỉ nói đích đến, hệ thống mới nói bạn đi tới đó ra sao.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              Clear đảo trọng tâm từ <b>results</b> sang <b>process</b>. Mục tiêu thắng cuộc: mọi vận động viên
+              đều muốn HCV — người thắng là người có hệ thống huấn luyện tốt hơn. Ông đóng khung thay đổi thành
+              <b>3 tầng</b>: <i>Kết quả</i> ← <i>Quy trình</i> ← <i>Bản sắc</i>. Thay đổi từ ngoài vào (kết quả)
+              thì tạm; thay đổi từ trong ra (bản sắc) thì bền.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Mục tiêu tạo trạng thái <b>thắng/thua nhị phân</b> tạm thời: đạt rồi thì mất động lực, không đạt thì thất vọng. Hệ thống chạy liên tục bất kể kết quả đơn lẻ. Cơ chế: hệ thống quy trình lặp đi lặp lại chính là thứ <i>tạo ra</i> kết quả — tập trung vào hệ thống = tập trung vào nguyên nhân, không phải triệu chứng.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              Phân biệt <b>motion (chuẩn bị) vs action (thực sự làm)</b> của Clear — việc nghiên cứu/nhập khóa học "cảm giác như tiến bộ" nhưng không tạo kết quả: một dạng tự lừa của hệ thống mục tiêu.<br>
+              Hỗ trợ gián tiếp: nghiên cứu thói quen (Wood) cho thấy hành vi lặp trong môi trường ổn định mới là thứ tạo thay đổi thật.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Đổi góc nhìn sắc bén số 1 của sách. Dẫn tới C4 (bản sắc là tầng sâu nhất). Đối chiếu <a href="../four-thousand-weeks/index.html#concept-2">Four Thousand Weeks</a>: cả hai đều nghi ngờ ưu tiên mục tiêu — nhưng Burkeman đi xa hơn, nghi ngờ luôn cả "hệ thống tối ưu".</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 4 — Identity -->
+      <section id="concept-4" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">4</span>
+          <div>
+            <p class="concept__part">Đổi góc nhìn #2 · ⚠ Đối chiếu</p>
+            <h2>Bản sắc (Identity-based Habits)</h2>
+          </div>
+        </div>
+        <p class="concept__def">Hình thành thói quen bằng cách đặt câu hỏi "mình muốn TRỞ THÀNH ai", không chỉ "mình muốn ĐẠT cái gì" — nhưng đây là ý tưởng nổi tiếng nhất mà khoa học thói quen lại ủng hộ ít nhất.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              Thay "tôi muốn đọc nhiều sách" bằng "tôi LÀ người đọc sách" — hành động trở thành <i>phiếu bầu</i>
+              cho bản sắc. Clear lập luận: động lực bền vững nhất khi nó đến từ <b>bản sắc</b> (tầng sâu nhất
+              trong Kết quả ← Quy trình ← Bản sắc).
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Clear: hành vi lặp → trở thành bằng chứng cho bản sắc → củng cố bản sắc → thúc đẩy hành vi tiếp. Vòng phản hồi tự củng cố. <b>Nhưng:</b> giới nghiên cứu thói quen hàng đầu <i>đảo ngược</i> chiều này (xem Bằng chứng) — nên "vì sao" ở đây đang bị tranh cãi gay gắt.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              <span class="alert">⚠ Ý tưởng được trích dẫn nhiều nhất lại ít được ủng hộ nhất.</span><br>
+              <b>Wendy Wood, Benjamin Gardner, Katy Milkman</b> đều đảo ngược: <i>sự lặp lại trong môi trường ổn định tạo ra thói quen, rồi bản sắc theo sau</i>.<br>
+              Gardner: "Bản sắc không phải đặc tính định hình nên thói quen."<br>
+              Milkman — <b>self-perception theory</b>: bạn suy ra bản sắc <i>từ chính hành vi</i> của mình.<br>
+              ⇒ Bản sắc giúp <b>duy trì</b> thói quen, không phải <b>khởi đầu</b> nó.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Đổi góc nhìn sắc bén số 2 của Clear, nhưng cần đọc cùng Phản biện #01. Xâu chuỗi: Hệ thống (C3) → lặp → thói quen → bản sắc (C4). Tương phản với <a href="../deep-work/index.html">Deep Work</a> (Newport) nhấn triết lý &amp; luật, ít dùng khung bản sắc.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 5 — Marginal Gains / 1% -->
+      <section id="concept-5" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">5</span>
+          <div>
+            <p class="concept__part">Toán học? · ⚠ Đối chiếu</p>
+            <h2>Thặng dư nhỏ &amp; lũy tiến (Marginal Gains)</h2>
+          </div>
+        </div>
+        <p class="concept__def">Tốt hơn 1% mỗi ngày được cho là tăng 37 lần sau một năm — một ẩn dụ truyền cảm hứng được ngụy trang dưới dạng toán học; phần lớn tăng trưởng không cộng dồn kiểu này.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              Clear vay câu chuyện <b>đội đua xe đạp Anh</b> của Dave Brailsford ("thặng dư nhỏ" — marginal
+              gains: cải tiến 1% ở mọi mặt). Đi kèm ẩn dụ <b>khối băng trôi</b>: nước từ −4°C đến −0,5°C vẫn
+              là đá, nhưng +0,5°C nữa sẽ tan — "vùng tiềm năng ẩn giấu" (latent potential) trước khi kết quả
+              xuất hiện.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Thông điệp thật hợp lý: kết quả trễ so với nỗ lực, đừng bỏ cuộc khi chưa thấy tiến triển. <b>Nhưng</b> con số "1%/ngày × 365 = 37×" là <i>lãi kép liên tục</i> — áp dụng cho lãi suất tiền, không cho kỹ năng/hành vi con người. Nhiều đường tăng trưởng thực có <b>hiệu suất giảm dần</b> (diminishing returns), không phải lũy tiến.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              <span class="alert">⚠ Câu chuyện đạp xe được kể chọn lọc.</span> Cùng thời, đội Anh nhận <b>tăng ngân sách lớn</b>, huấn luyện viên giỏi hơn — và sau đó là <b>bê bối doping</b>. Bradley Wiggins (HCV dưới Brailsford) gọi thuyết thặng dư nhỏ là <i>"một đống vô lý"</i>, cho rằng phải làm đúng các yếu tố cốt lõi trước. Một ví dụ kinh điển gán chiến thắng đa nguyên nhân cho một yếu tố hấp dẫn.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Ủng hộ thông điệp "hệ thống lặp lại" của C3, nhưng đừng hiểu "37×" theo nghĩa đen. Cùng họng với Phản biện #02 (toán học bị thổi phồng) &amp; #04 (thiên kiến sống sót).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 6 — Environment > Willpower -->
+      <section id="concept-6" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">6</span>
+          <div>
+            <p class="concept__part">Đòn bẩy thật</p>
+            <h2>Môi trường &gt; Ý chí (Environment over Willpower)</h2>
+          </div>
+        </div>
+        <p class="concept__def">Bối cảnh luôn thắng ý chí — đây mới là đòn bẩy được tài liệu nghiên cứu ủng hộ mạnh nhất trong toàn bộ cuốn sách.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              Thiết kế môi trường = thay đổi <b>ma sát</b>: đưa gợi ý tốt vào tầm mắt, đẩy cám dỗ ra xa tay.
+              <b>Quy tắc 2 phút:</b> thu nhỏ bước khởi đầu tới khi sự kháng cự biến mất ("đọc 1 trang" thay vì
+              "đọc 30 phút"). <b>Goldilocks:</b> động lực đạt đỉnh khi thách thức nằm ngay <i>sát ngưỡng</i>
+              năng lực. Ý định thực thi (khi nào/ở đâu/sau cái gì) là chiến thuật lặp thành công nhất.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Ý chí là tài nguyên hạn chế và hay cạn; thói quen thì tự động (C1). Dời reliance từ ý chí sang <b>cấu trúc môi trường</b> = biến hành vi tốt thành lựa chọn <i>mặc định</i>. Cơ chế: môi trường ổn định + lặp → tự động hoá → ít cần nỗ lực → bền (đúng chiều khoa học ở C4: lặp <i>trước</i>, bản sắc <i>sau</i>).</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              <b>Thiết kế môi trường/bối cảnh</b> — đòn bẩy mạnh nhất trong toàn bộ tài liệu thói quen.<br>
+              <b>Ý định thực thi</b> — Gollwitzer &amp; Sheeran, <b>d ≈ 0,65</b> (xem C2).<br>
+              <b>Gom nhóm cám dỗ</b> — Milkman et al. (2014), <b>+29–51%</b> lượt tập.<br>
+              <b>"Không bỏ lỡ 2 lần"</b> — Lally: bỏ lỡ một ngày không ảnh hưởng đáng kể quá trình hình thành thói quen.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Phần <b>được khoa học ủng hộ vững nhất</b> của sách — đối lập với C4 &amp; C5 (ít bằng chứng). Tinh thần trùng <a href="../hyperfocus/index.html#concept-3">Hyperfocus</a> (dời reliance từ ý chí sang môi trường) và <a href="../deep-work/index.html#concept-4">Deep Work</a> (attention residue → cần chặn gián đoạn).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 3 · APPLICATION LAB ============ -->
+      <section id="application" class="sec sec--alt">
+        <div class="sec__head">
+          <span class="sec__no">▶</span>
+          <div>
+            <p class="sec__part">Tác dụng thực tế</p>
+            <h2>Ứng dụng — Năm điều đáng giữ</h2>
+          </div>
+        </div>
+        <p class="lede">
+          Cuốn sách <b>rất dễ áp dụng</b> — đó là sức mạnh thật của nó. Năm nguyên tắc dưới đây đứng vững;
+          kèm theo hai lưu ý quan trọng về "vùng tiềm năng ẩn giấu" và khi nào nên bỏ khung này.
+        </p>
+
+        <div class="ticks">
+          <div class="tick"><b>Tập trung vào quy trình lặp được, không kết quả</b><span>Theo dõi <i>hệ thống</i> (mình có làm theo tiến trình không) hơn <i>mục tiêu</i> (mình đạt chưa). <i>Tác dụng:</i> động lực liên tục bất kể kết quả đơn lẻ — hệ thống mới là nguyên nhân tạo kết quả (C3).</span></div>
+          <div class="tick"><b>Thiết kế môi trường trước khi cậy kỷ luật</b><span>Đưa gợi ý tốt vào tầm mắt, đẩy cám dỗ ra xa tay; dọn ma sát cho hành vi tốt, tăng ma sát cho xấu. <i>Tác dụng:</i> dời reliance từ ý chí (hạn hẹp) sang cấu trúc — đòn bẩy được nghiên cứu ủng hộ mạnh nhất (C6).</span></div>
+          <div class="tick"><b>Viết ý định thực thi rõ ràng</b><span>"Tôi sẽ [X] lúc [giờ] tại [nơi], sau [thói quen cũ]." <i>Tác dụng:</i> cụ thể hoá WHEN+WHERE khiến ý định tự kích hoạt — Gollwitzer &amp; Sheeran: d ≈ 0,65, chiến thuật thành công nhất.</span></div>
+          <div class="tick"><b>Thu nhỏ bước khởi đầu tới khi kháng cự biến mất</b><span>Quy tắc 2 phút: "đọc 1 trang", "mặc giày chạy". <i>Tác dụng:</i> hạ ngưỡng khởi động — khởi đầu là phần khó nhất; một khi đã bắt đầu, tiếp tục dễ hơn nhiều.</span></div>
+          <div class="tick"><b>Không bao giờ bỏ lỡ 2 lần liên tiếp</b><span>Bỏ lỡ một ngày thì được — bỏ lỡ thứ hai là bắt đầu thói quen mới (bỏ). <i>Tác dụng:</i> Lally cho thấy 1 ngày lỡ không phá tiến trình; quy tắc này giữ chuỗi không đứt hẳn.</span></div>
+        </div>
+
+        <div class="callout">
+          <div class="callout__t">🧊 Chuẩn bị tinh thần cho "vùng tiềm năng ẩn giấu"</div>
+          <p>Nếu một hành vi vẫn thấy tốn sức sau <b>8–10 tuần</b>, đó là bình thường — thời gian trung vị
+            hình thành thói quen là <b>66 ngày</b> (Lally et al., 2010). Đừng bỏ cuộc đúng lúc khối băng
+            sắp tan. <i>Nhưng</i> nếu theo dõi chuỗi ngày tạo cảm giác <b>gánh nặng/tội lỗi</b> thay vì thúc đẩy,
+            hãy chuyển sang thói quen linh hoạt — Milkman phát hiện thói quen linh hoạt <i>đánh bại</i> thói
+            quen cứng nhắc, ngược giáo điều "giữ chuỗi bằng mọi giá" của Clear.</p>
+        </div>
+
+        <div class="callout">
+          <div class="callout__t">⚠️ Khi nào cuốn sách gậy ông đập lưng ông</div>
+          <p>Nếu rào cản của bạn mang tính <b>lâm sàng</b> — nghiện nặng, trầm cảm, ADHD, rối loạn chức năng
+            điều hành — thì "chỉ bắt đầu 2 phút" hay "theo dõi chuỗi" có thể tạo <i>vòng xoáy xấu hổ</i>.
+            Coi cuốn này là công cụ <b>hỗ trợ thêm</b>, không thay điều trị chuyên khoa (xem Phản biện #07).</p>
+        </div>
+      </section>
+
+      <!-- ============ 4 · CRITICAL LENS ============ -->
+      <section id="critique" class="sec">
+        <div class="sec__head">
+          <span class="sec__no">!</span>
+          <div>
+            <p class="sec__part">Cân bằng</p>
+            <h2>Góc nhìn phản biện</h2>
+          </div>
+        </div>
+        <p class="lede">Cuốn sách dễ áp dụng và được yêu thích — nhưng có nhiều tuyên bố khoa học bị thổi phồng và giai thoại mang thiên kiến sống sót. Đây là những điểm đáng cân nhắc thật.</p>
+        <div class="crit-grid">
+          <div class="crit"><span class="crit__n">01</span><p><b>"Bản sắc là trên hết" bị khoa học đảo ngược.</b> Ý tưởng nổi nhất lại ít được ủng hộ nhất. Wendy Wood, Benjamin Gardner và Katy Milkman thực ra <b>đảo ngược</b>: lặp trong môi trường ổn định tạo thói quen, rồi bản sắc <i>theo sau</i>. Gardner: "Bản sắc không phải đặc tính định hình nên thói quen." Milkman — self-perception theory: bạn suy ra bản sắc từ chính hành vi. ⇒ Bản sắc <b>duy trì</b>, không <b>khởi đầu</b>.</p></div>
+          <div class="crit"><span class="crit__n">02</span><p><b>"1% = 37×" là toán học giả.</b> Ẩn dụ truyền cảm hứng ngụy trang dạng toán. Đó là lãi kép liên tục của tiền, không phải kỹ năng/hành vi. Phần lớn tăng trưởng thực có <b>hiệu suất giảm dần</b>, không phải lũy tiến kiểu này.</p></div>
+          <div class="crit"><span class="crit__n">03</span><p><b>Đánh tráo "thói quen" vs "hành vi hướng mục tiêu".</b> Học thuật: thói quen = hành vi kích hoạt bởi gợi ý, <i>tự động</i>. Nhiều thứ Clear gọi "thói quen" (viết 1.000 từ, tập thể dục phức tạp) thực ra là chuỗi <b>cần nỗ lực</b>. Sự đánh tráo này là lý do sách bác ý chí trang này, rồi ngay trang sau khuyến nghị nghi thức tạo động lực.</p></div>
+          <div class="crit"><span class="crit__n">04</span><p><b>Thiên kiến sống sót trong giai thoại.</b> Đội đạp xe Anh / thặng dư nhỏ: cùng lúc họ nhận <b>tăng ngân sách lớn</b>, huấn luyện viên giỏi hơn, rồi bê bối <b>doping</b>. Wiggins (HCV dưới Brailsford) gọi thuyết thặng dư nhỏ là "một đống vô lý" — phải làm đúng yếu tố cốt lõi trước. Gán chiến thắng đa nguyên nhân cho một yếu tố hấp dẫn.</p></div>
+          <div class="crit"><span class="crit__n">05</span><p><b>Hũ ghim giấy của Trent Dyrsmid.</b> Dyrsmid là người thật, nhưng con số <b>5 triệu USD</b> đến từ một email ông gửi Clear năm 2015 kể sự kiện năm 1993 — nguồn đơn lẻ, hồi tưởng, chưa kiểm chứng độc lập.</p></div>
+          <div class="crit"><span class="crit__n">06</span><p><b>Nghiện heroin ở Việt Nam — bị đơn giản hoá.</b> ~20% binh sĩ phụ thuộc lúc tại ngũ, chỉ ~5% tái nghiện khi về nhà — nghiên cứu thật &amp; quan trọng. Nhưng chính tác giả Robins <b>cảnh báo</b> đừng diễn giải kiểu "chỉ cần đổi môi trường là xong". Dùng làm truyền cảm hứng, không phải bằng chứng.</p></div>
+          <div class="crit"><span class="crit__n">07</span><p><b>Yếu với vấn đề tâm lý/lâm sàng.</b> Rất kém với nghiện nặng, trầm cảm, ADHD, rối loạn điều hành. "Chỉ 2 phút" hay theo dõi chuỗi có thể tạo <b>vòng xoáy xấu hổ</b> — đúng cái bẫy mà phần còn lại của sách cố tránh.</p></div>
+          <div class="crit"><span class="crit__n">08</span><p><b>Tính kế thừa &amp; bỏ qua rào cản hệ thống.</b> Phát triển lại từ Duhigg (<i>Power of Habit</i>) và BJ Fogg (<i>Tiny Habits</i>); không phải công trình nguyên bản. Đồng thời lờ đi các <b>rào cản cấu trúc</b> xã hội–kinh tế đối với hành vi — cùng kiểu mù giai cấp ở <a href="../four-thousand-weeks/index.html#critique">Four Thousand Weeks</a>.</p></div>
+        </div>
+      </section>
+
+      <!-- ============ 5 · CLOSING ============ -->
+      <section class="closing">
+        <blockquote class="closing__q">"You do not rise to the level of your goals. You fall to the level of your systems."</blockquote>
+        <p class="closing__t">Bạn không vươn lên tới tầm mục tiêu — bạn tụ xuống tầm hệ thống của mình.</p>
+
+        <p class="closing__t" style="margin-top:-.8rem; font-style:italic;">"Every action you take is a vote for the type of person you wish to become."</p>
+
+        <details class="sources">
+          <summary>Nguồn tham khảo &amp; đọc thay thế</summary>
+          <ul>
+            <li>James Clear — <i>Atomic Habits</i> (Avery/Penguin, 2018).</li>
+            <li>Charles Duhigg — <i>The Power of Habit</i> (2012): vòng lặp 3 bước gốc.</li>
+            <li>BJ Fogg — <i>Tiny Habits</i> (2019): tiền đề nghiên cứu tại Stanford.</li>
+            <li>Wendy Wood — <i>Good Habits, Bad Habits</i> (2019): ~43% hành động hằng ngày là thói quen; bản sắc theo sau, không đi trước.</li>
+            <li>Katy Milkman — <i>How to Change</i> (2021): thói quen linh hoạt thắng thói quen cứng nhắc.</li>
+            <li>Gollwitzer &amp; Sheeran — meta-analysis ý định thực thi (94 nghiên cứu, d ≈ 0,65).</li>
+            <li>Lally et al. (2010) — trung vị 66 ngày hình thành thói quen (18–254).</li>
+            <li>Milkman et al. (2014) — temptation bundling, +29–51% lượt tập.</li>
+            <li>Robins et al. — nghiên cứu nghiện heroin ở lính Việt Nam.</li>
+            <li>Bradley Wiggins — phê bình thuyết "thặng dư nhỏ" của Brailsford.</li>
+            <li><b>Đối chiếu trong thư viện:</b> <a href="../deep-work/index.html">Deep Work</a> · <a href="../hyperfocus/index.html">Hyperfocus</a> · <a href="../four-thousand-weeks/index.html">Four Thousand Weeks</a>.</li>
+          </ul>
+        </details>
+      </section>
+
+      <footer class="footer">
+        <p>Visual tổng hợp cuốn <em>Atomic Habits</em> (James Clear, 2018) · Đã đối chiếu khoa học thói quen thật &amp; đính chính nguồn.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../../assets/book.js"></script>
+</body>
+</html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Four Thousand Weeks — Tổng hợp trực quan</title>
+  <meta name="description" content="Tổng hợp trực quan, có hệ thống, cuốn Four Thousand Weeks của Oliver Burkeman — hữu hạn không phải lỗi, và 'làm hết mọi việc' là bất khả thi về cấu trúc." />
+
+  <!-- Per-book accent: terra-cotta (trọng lực hiện sinh — phân biệt với Deep Work tím & Hyperfocus teal) -->
+  <style>
+    :root { --accent: #c2410c; --accent-d: #9a3412; --accent-tint: #ffedd5; }
+  </style>
+
+  <link rel="stylesheet" href="../../assets/book.css" />
+</head>
+<body>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <div class="layout">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar__brand">
+        <span class="sidebar__dot"></span>
+        <span>Four Thousand Weeks</span>
+        <button class="sidebar__close" id="sidebarClose" aria-label="Đóng menu">✕</button>
+      </div>
+
+      <a href="../../index.html" class="sidebar__back">← Thư viện sách</a>
+
+      <nav class="tree" id="tree">
+        <p class="tree__part">Khung</p>
+        <a href="#frame" class="tree__l1">30 giây — Các ý chính</a>
+
+        <p class="tree__part">Khái niệm</p>
+        <a href="#concept-1" class="tree__l1">1 · Hữu hạn (Finitude)</a>
+        <a href="#concept-2" class="tree__l1">2 · Bẫy năng suất</a>
+        <a href="#concept-3" class="tree__l1">3 · Chọn từ bỏ</a>
+        <a href="#concept-4" class="tree__l1">4 · Quyết định = cắt bỏ</a>
+        <a href="#concept-5" class="tree__l1">5 · Thời gian công cụ</a>
+        <a href="#concept-6" class="tree__l1">6 · Vô đích &amp; vô nghĩa vũ trụ</a>
+
+        <p class="tree__part">Áp dụng &amp; Phản biện</p>
+        <a href="#application" class="tree__l1">Ứng dụng thực tế</a>
+        <a href="#critique" class="tree__l1">Góc nhìn phản biện</a>
+      </nav>
+
+      <a href="#top" class="sidebar__top">↑ Lên đầu trang</a>
+    </aside>
+
+    <!-- ============ MAIN ============ -->
+    <main class="main" id="top">
+
+      <div class="mobilebar">
+        <button class="mobilebar__btn" id="menuBtn">☰ Mục lục</button>
+      </div>
+
+      <!-- ============ 0 · IDENTITY HERO ============ -->
+      <section class="hero">
+        <div class="hero__inner">
+          <p class="hero__kicker">Tổng hợp · chẩn đoán triết học · đã cross-check nguồn</p>
+          <h1 class="hero__title">Four Thousand Weeks</h1>
+          <p class="hero__titlevi">Bốn nghìn tuần</p>
+          <p class="hero__sub">Một cuốn triết học mặc áo khoác quản lý thời gian — năng suất là một cuộc trốn chạy hữu hạn, và trốn không được.</p>
+          <p class="hero__meta">Oliver Burkeman · 2021 · Triết lý / Năng suất</p>
+
+          <div class="hero__formula">
+            <span class="hf__label">Luận điểm trung tâm</span>
+            <div class="hf__eq">
+              <span>Một đời (80 tuổi)</span>
+              <span class="hf__op">=</span>
+              <span class="hf__accent">≈ 4000 tuần</span>
+              <span class="hf__op">⇒</span>
+              <span>không thể làm hết</span>
+            </div>
+            <p class="hf__note">Hữu hạn không phải lỗi cần sửa bằng kỹ thuật — nó là <b>điều kiện</b> của một cuộc đời ý nghĩa. Mọi hệ thống năng suất đều là nỗ lực thoát khỏi một giới hạn không thể thoát.</p>
+          </div>
+
+          <p class="hero__intro">
+            Trang này tổ chức cuốn sách theo cấu trúc cố định: phần <b>30 giây</b> cho bản đồ ý tưởng,
+            các <b>Concept</b> đi sâu từng khái niệm (kèm vì sao + bằng chứng), <b>Ứng dụng</b> gom
+            hành động cụ thể, và <b>Phản biện</b> cho góc nhìn cân bằng — đặc biệt quan trọng vì cuốn
+            này <i>giỏi chẩn đoán, yếu đơn thuốc</i>. Dùng mục lục bên trái để định hướng.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 1 · 30-SECOND FRAME ============ -->
+      <section id="frame" class="frame">
+        <div class="frame__head">
+          <span class="frame__no">◎</span>
+          <div>
+            <p class="frame__part">Bản đồ ý tưởng</p>
+            <h2>30 giây — Các ý chính</h2>
+          </div>
+        </div>
+        <ol class="frame__list">
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-1">Hữu hạn (Finitude)</a></b>
+              <span>~4000 tuần cả đời — hữu hạn là điều kiện của ý nghĩa, không phải chướng ngại.</span>
+            </div>
+            <span class="frame__tag">Tiền đề</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-2">Bẫy năng suất</a></b>
+              <span>Làm được nhiều hơn tạo ra nhiều việc hơn — tối ưu thất bại vì nó thành công.</span>
+            </div>
+            <span class="frame__tag">Chẩn đoán</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-3">Chọn từ bỏ</a></b>
+              <span>Đầu vào vô hạn × thời gian hữu hạn ⇒ câu hỏi là "từ chối cái gì", không phải "nhét sao".</span>
+            </div>
+            <span class="frame__tag">Đảo câu hỏi</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-4">Quyết định = cắt bỏ</a></b>
+              <span>Mọi lựa chọn triệt tiêu các lựa chọn khác — đó là điều làm nó có nghĩa.</span>
+            </div>
+            <span class="frame__tag">Ý nghĩa</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-5">Thời gian công cụ</a></b>
+              <span>Coi hiện tại là phương tiện cho tương lai = sống bị hoãn mãi. Ta không "có" thời gian, ta LÀ thời gian.</span>
+            </div>
+            <span class="frame__tag">Cơ chế</span>
+          </li>
+          <li>
+            <div class="frame__main">
+              <b><a href="#concept-6">Vô đích &amp; vô nghĩa vũ trụ</a></b>
+              <span>Bảo vệ việc không có đích/kết quả; thấy nhẹ khi mình không quan trọng lắm.</span>
+            </div>
+            <span class="frame__tag">Đơn thuốc</span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ 2 · CONCEPT DEEP-DIVES ============ -->
+
+      <!-- Concept 1 — Finitude -->
+      <section id="concept-1" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">1</span>
+          <div>
+            <p class="concept__part">Mở · Tiền đề</p>
+            <h2>Hữu hạn (Finitude)</h2>
+          </div>
+        </div>
+        <p class="concept__def">Sống đến 80 tuổi bạn có khoảng 4000 tuần — và hữu hạn không phải lỗi cần khắc phục, mà là điều kiện tiên quyết của một cuộc đời ý nghĩa.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              Toàn bộ cơ sở sách: 80 × 52,14 ≈ <b>4171 tuần</b> → Burkeman làm tròn thành "bốn nghìn".
+              Văn hoá năng suất mặc định hữu hạn là <i>vấn đề</i> cần "giải quyết" bằng kỹ thuật
+              (app, quy trình, dậy sớm hơn). Burkeman đảo ngược: hữu hạn là <b>tiền đề</b> — không có giới hạn
+              thì lựa chọn không có trọng lượng.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Ý nghĩa nảy sinh <b>chính vì</b> giới hạn. Nếu có thể làm mọi thứ, không việc nào quan trọng hơn việc khác; nếu sống mãi mãi, không khoảnh khắc nào khẩn trương. Đây là cơ chế hiện sinh, không phải lời an ủi — đối lập trực tiếp với giả định ngầm của toàn bộ thể loại self-help.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              Heidegger — <i>Sein und Zeit</i> (1927): "being-towards-death" (Sein-zum-Tode).<br>
+              Ernest Becker — <i>The Denial of Death</i> (giải Pulitzer 1974): toàn bộ văn hoá là chối bỏ cái chết.<br>
+              Seneca — <i>De Brevitate Vitae</i> (Về sự ngắn ngủi của cuộc đời).
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Đây là <i>nền</i> cho mọi concept sau: Bẫy năng suất (C2) là <b>nỗ lực trốn</b> hữu hạn; Chọn từ bỏ (C3) là <b>cách trả lời đúng</b> thay vì trốn.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 2 — The Efficiency Trap -->
+      <section id="concept-2" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">2</span>
+          <div>
+            <p class="concept__part">Chẩn đoán trội nhất</p>
+            <h2>Bẫy năng suất (The Efficiency Trap)</h2>
+          </div>
+        </div>
+        <p class="concept__def">Làm được nhiều hơn tạo ra nhiều việc phải làm hơn — tối ưu hoá thất bại chính vì nó thành công.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              Hoàn thành inbox <b>tín hiệu năng lực</b> ⇒ thu thêm đầu vào; dọn xong backlog = lời mời thêm việc.
+              Khối lượng việc co giãn theo năng lực — hiệu ứng "Hydra" (chặt một đầu, mọc hai). Tối ưu hoá
+              <i>tốc độ</i> không chạm vào <i>khối lượng</i>; nó chỉ đẩy nhanh một băng chuyền tự mở rộng.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Sự thất bại là <b>cấu trúc</b>, không phải kỹ thuật. Đầu vào (email, yêu cầu, ý tưởng, nghĩa vụ) là vô hạn; thời gian thì hữu hạn. Tăng tốc chỉ làm cho biên giới "đã xong / chưa xong" lùi ra xa nhanh hơn. Đây là lý do mọi app năng suất, sau một tuần hưng phấn, đều quay về xáo trộn cũ.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              Parkinson's Law — công việc mở rộng lấp đầy thời gian dành cho nó.<br>
+              Hartmut Rosa — <i>Social Acceleration</i>: càng hiệu quả, kỳ vọng xã hội càng tăng, ròng rệt bận hơn.<br>
+              Cowan &amp; Schor — ủng hộ quan điểm "công việc vô hình" mở rộng theo năng lực (xem C5).
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Đây là <b>chẩn đoán chìa khoá</b> của sách — giải thích vì sao cả thể loại productivity thất bại. Dẫn thẳng tới C3: câu hỏi đúng không phải "làm sao nhét hết" mà "tôi cố ý <i>từ chối</i> điều gì".</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 3 — Choosing What to Neglect -->
+      <section id="concept-3" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">3</span>
+          <div>
+            <p class="concept__part">Đảo câu hỏi</p>
+            <h2>Chọn từ bỏ (Choosing What to Neglect)</h2>
+          </div>
+        </div>
+        <p class="concept__def">Dòng đầu vào vô hạn, thời gian của bạn thì không — nên câu hỏi thực sự không bao giờ là "làm sao nhét hết" mà là "tôi cố ý từ chối điều gì".</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              Đảo ngược câu hỏi mặc định của năng suất. Thay vì một to-do dài thêm, Burkeman đề xuất
+              một danh sách <b>"to-neglect"</b> cố ý: quyết định <i>trước</i> bạn sẽ để trôi điều gì
+              (một dự án, một mối quan hệ thứ yếu, một nỗ lực "để kể cho hay"). Cố làm tất cả = không
+              việc nào trọn vẹn.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Từ chối là <b>cần thiết về logic</b>, không phải thất bại đạo đức — hậu quả tất yếu của hữu hạn (C1) gặp vô hạn (C2). Cảm giác tội lỗi khi "bỏ sót" là triệu chứng của giả định sai (rằng "làm hết" khả thi). Một khi thừa nhận nó bất khả thi, tội lỗi mất nền tảng.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              Tính từ nguyên: "decide" từ Latin <i>decidere</i> (de- "khỏi" + caedere "cắt") — quyết định nghĩa đen là <b>cắt bỏ</b> (xem C4).<br>
+              Burkeman đề nghị "pre-commitment to failure": chọn sẵn mặt trận bạn sẽ thua.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Chuyển từ chẩn đoán (C2) sang hành động. C4 đào sâu thêm: chính <b>sự mất mát</b> khi từ bỏ mới là thứ <i>trao giá trị</i>; C6 chỉ ra loại hoạt động mà bạn <b>không nên</b> từ bỏ (atelic).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 4 — Settling / Decide = Cut Off -->
+      <section id="concept-4" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">4</span>
+          <div>
+            <p class="concept__part">Cơ chế ý nghĩa</p>
+            <h2>Quyết định = cắt bỏ (Settling)</h2>
+          </div>
+        </div>
+        <p class="concept__def">Mọi lựa chọn đều triệt tiêu các lựa chọn khác — và chính điều đó làm nó có ý nghĩa.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              FOMO (sợ bỏ lỡ) các phương án thay thế = một dạng né tránh hữu hạn. Chấp nhận "dừng lại"
+              (settle) vào một người / một con đường / một nghề = cam kết <i>biết rằng</i> các con đường
+              khác sẽ không đi. Burkeman gợi ý tưởng tượng bạn đã chọn xong và để các phương án kia
+              "chết" một cách có ý thức.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Nếu không triệt tiêu, chưa phải lựa chọn thật — chỉ là hoãn. Cơ chế hiện sinh: cam kết tạo ý nghĩa <b>chính thông qua sự từ bỏ cố ý</b> vô hạn khả năng. Đây là chỗ Burkeman gần Kierkegaard nhất — niềm tin là "sự trỗi dậy của cái vô hạn trong cái hữu hạn"; không "nhảy" vì sợ mất phương án = trôi.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              Kierkegaard — <i>Either/Or</i> (1843): nỗi đau của lựa chọn.<br>
+              Kieran Setiya — <i>Midlife</i> (2017): cảm giác "bỏ lỡ" (missing out) là cấu trúc của khủng hoảng tuổi trung niên.<br>
+              Becker: lòng dũng cảm văn hoá bắt nguồn từ việc đối mặt cái chết, không trốn.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Sâu hơn C3: không chỉ là <i>chọn</i> từ bỏ, mà sự mất mát <b>chính là</b> nguồn giá trị. Đối chiếu văn hoá "giữ mọi cửa mở" (sợ cam kết) — Burkeman coi đó là triệu chứng của chối bỏ hữu hạn.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 5 — Instrumentalized Time -->
+      <section id="concept-5" class="concept">
+        <div class="concept__head">
+          <span class="concept__no">5</span>
+          <div>
+            <p class="concept__part">Cơ chế sâu · + Distraction</p>
+            <h2>Thời gian công cụ (Instrumentalized Time)</h2>
+          </div>
+        </div>
+        <p class="concept__def">Coi hiện tại chỉ là phương tiện cho phần thưởng tương lai = cuộc đời bị trì hoãn vĩnh viễn — chúng ta không "có" thời gian, chúng ta LÀ thời gian.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              Lịch đầy họp, inbox đầy, rồi <i>"sẽ sống"</i> sau khi xong / cuối tuần / khi hưu — nhưng
+              "sau đó" không bao giờ tới (C2). Pieper gọi đó là <b>thời gian công cụ</b> (mỗi khoảnh khắc
+              là input cho output kế tiếp) đối lập với <b>thời gian trải nghiệm</b>. <br>
+              <b>Distraction</b> ở đây không phải "dopamine hijack" mà là <i>phieu</i> trốn sự bất tiện
+              khi đối diện giới hạn của mình.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Văn hoá coi thời gian là tài nguyên cần "tiêu"/"tiết kiệm" (xuất xứ từ clock-time công nghiệp) biến mọi khoảnh khắc thành phương tiện. Hiện tại mất giá trị nội tại. Burkeman mượn Heidegger: con người là <i>Dasein</i>, "tồn tại-ở-đó" — ta không <b>sở hữu</b> thời gian như đồ vật, ta <b>phục</b> trong thời gian. Càng instrumentali hóa, càng trốn khỏi chính đời mình.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              E.P. Thompson — "Time, Work-Discipline and Industrial Capitalism" (1967): chuyển từ <i>task-orientation</i> sang <i>clock-time</i>.<br>
+              Josef Pieper — <i>Leisure as the Basis of Culture</i> (1948): leisure là mục đích tự thân, không phải phục hồi cho lao động.<br>
+              <span class="alert">Cross-check:</span> Orben &amp; Przybylski (<i>Nature Human Behaviour</i>, 2019) — công nghệ số giải thích tối đa <b>0,4%</b> phương sai wellbeing ⇒ bác narrativ "dopamine". Burkeman <b>khá hơn</b> thể loại ở điểm này.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Giải thích vì sao quy tắc Ứng dụng "ngừng coi nghỉ là phục hồi cho công việc" lại quan trọng. Distraction ở đây cùng họng với chối bỏ hữu hạn (chủ đề xuyên suốt). C6 đưa đáp án dương tính: hoạt động <b>vô đích</b>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Concept 6 — Atelic Activity + Cosmic Insignificance -->
+      <section id="concept-6" class="concept concept--alt">
+        <div class="concept__head">
+          <span class="concept__no">6</span>
+          <div>
+            <p class="concept__part">Đơn thuốc dương tính</p>
+            <h2>Hoạt động vô đích &amp; vô nghĩa vũ trụ</h2>
+          </div>
+        </div>
+        <p class="concept__def">Bảo vệ những hoạt động không có điểm kết và không có phần thưởng — và thấy nhẹ nhõm khi bạn không quan trọng lắm ở quy mô vũ trụ.</p>
+        <div class="concept__rows">
+          <div class="concept__row">
+            <span class="concept__label">What</span>
+            <p>
+              <b>Atelic</b> (Setiya, mượn Aristotle): hoạt động <i>quá trình</i>, không có đích hoàn thành —
+              sở thích, dạo bộ, chơi đàn dở. Teletic (có đích) một khi hoàn thành thì "xong", giá trị ở kết quả;
+              atelic thì giá trị ở <b>chính quá trình</b>. Sẵn sàng <i>dở / kém</i> ở một việc.<br>
+              <b>Liệu pháp vô nghĩa vũ trụ:</b> bạn không quan trọng ở quy mô vũ trụ → hạ tiêu chuẩn
+              "phải xuất chúng / để lại di tích" → nhẹ nhõm.
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--why">Vì sao</span>
+            <p>Hoạt động vô đích <b>không thể</b> bị biến thành phương tiện (C5) — nó chống lại thương mại hoá hiện tại một cách cấu trúc. Còn vô nghĩa vũ trụ tháo gỡ áp lực cái tôi phải "chứng tỏ", trả tự do: nếu không ai (vũ trụ) ghi nhận, bạn được sống cho chính sống.</p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--evidence">Bằng chứng</span>
+            <p>
+              Kieran Setiya — <i>Midlife</i> (2017): phân loại <i>telic / atelic</i> từ Aristotle.<br>
+              Burkeman: chữ "cosmic insignificance therapy" và ví dụ "dám dở ở golf".<br>
+              <span class="alert">Cross-check:</span> narrativ này dựa nhẹ trên Terror Management Theory — nhưng TMT đã <b>tái lập kém</b> (xem Phản biện #06).
+            </p>
+          </div>
+          <div class="concept__row">
+            <span class="concept__label concept__label--link">Liên kết</span>
+            <p>Đây là "đơn thuốc" dương tính sau khi Burkeman chọc thủng thể loại. Đối trọng C5. <b>Cảnh báo:</b> nếu áp lực của bạn mang tính <i>vật chất / giai cấp</i> (không kiểm soát được lịch), thì điều này chưa đủ — xem Phản biện #01.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 3 · APPLICATION LAB ============ -->
+      <section id="application" class="sec sec--alt">
+        <div class="sec__head">
+          <span class="sec__no">▶</span>
+          <div>
+            <p class="sec__part">Tác dụng thực tế</p>
+            <h2>Ứng dụng — Năm điều đáng lấy</h2>
+          </div>
+        </div>
+        <p class="lede">
+          Burkeman giỏi chẩn đoán hơn đơn thuốc, nhưng có năm nguyên tắc đứng vững — và một giới hạn
+          quan trọng cần biết trước khi áp dụng (xem callout dưới).
+        </p>
+
+        <div class="ticks">
+          <div class="tick"><b>Cố định khối lượng việc, không phải tốc độ</b><span>Đặt giới hạn cứng số dự án / cam kết bạn nhận (vd không quá N cùng lúc), thay vì cố làm nhanh hơn. <i>Tác dụng:</i> chặn Bẫy năng suất (C2) ở nguồn — khối lượng cố định thì tối ưu tốc độ mới không tự mở rộng.</span></div>
+          <div class="tick"><b>Quyết định trước bạn sẽ thất bại ở đâu</b><span>Chọn sẵn mặt trận bạn <i>cố ý để trôi</i> (TV? một dự án phụ? mạng xã hội?) thay vì cố làm tất cả rồi cắn rứt. <i>Tác dụng:</i> biến "từ chối" từ cảm giác tội lỗi thành lựa chọn có chủ đích (C3).</span></div>
+          <div class="tick"><b>Giữ danh sách "ĐÃ LÀM", không chỉ to-do</b><span>Mỗi cuối ngày ghi những gì thực sự đã chọn làm. <i>Tác dụng:</i> chống cảm giác "không bao giờ xong" — nhìn lại thấy mình đã <i>chọn</i>, không phải chỉ phản ứng.</span></div>
+          <div class="tick"><b>Bảo vệ hoạt động không có đích, không phần thưởng</b><span>Giữ một sở thích bạn <b>dám dở</b>: dạo bộ, chơi đàn, làm vườn — thứ không thể "hoàn thành" hay ghi vào CV. <i>Tác dụng:</i> nuôi atelic (C6), chống thương mại hoá hiện tại (C5).</span></div>
+          <div class="tick"><b>Ngừng coi nghỉ là phục hồi cho công việc</b><span>Nghỉ vì nó đáng có, không phải để "sạc pin làm việc tốt hơn". Tách nghỉ khỏi logic instrumentali. <i>Tác dụng:</i> khôi phục giá trị nội tại của hiện tại —Pieper: leisure là mục đích, không phải nhiên liệu.</span></div>
+        </div>
+
+        <div class="callout">
+          <div class="callout__t">⚠️ Biết giới hạn của cuốn</div>
+          <p>Nếu sau tất cả, vấn đề thực của bạn là <b>người khác sở hữu lịch</b> và từ chối việc = mất thu nhập,
+            cuốn sách đã hết đường. Đó là vấn đề <i>cấu trúc</i>, và Burkeman thừa nhận nửa vời (chương
+            desynchronization). Lượt đọc kế tiếp tốt hơn:
+            <a href="#critique">Odell · Hersey · Graeber</a>.</p>
+        </div>
+      </section>
+
+      <!-- ============ 4 · CRITICAL LENS ============ -->
+      <section id="critique" class="sec">
+        <div class="sec__head">
+          <span class="sec__no">!</span>
+          <div>
+            <p class="sec__part">Cân bằng</p>
+            <h2>Góc nhìn phản biện</h2>
+          </div>
+        </div>
+        <p class="lede">Cuốn này khen nhiều chê ít — nhưng có những điểm đáng cân nhắc thực chất, gồm cả bằng chứng nền đã replicate kém.</p>
+        <div class="crit-grid">
+          <div class="crit"><span class="crit__n">01</span><p><b>Mù giai cấp — mạnh nhất.</b> "Chọn từ bỏ, chấp nhận nghỉ" giả định bạn <i>kiểm soát</i> được lịch. Với người làm việc bấp bênh, quá tải là <b>vật chất</b>, không phải triết học. Burkeman lường trước nửa vời (chương desynchronization, "social regulation of time") nhưng đơn thuốc vẫn là thay đổi <i>outlook cá nhân</i> — đúng động thái phi chính trị hoá mà giới phê bình phản đối.</p></div>
+          <div class="crit"><span class="crit__n">02</span><p><b>Giỏi chẩn đoán, yếu đơn thuốc.</b> Gần như phổ biến trong các review. Phụ lục "10 công cụ" thấy gắn thêm và hơi quy ước — lạ thay vì ông vừa chọc thủng chính thể loại đó.</p></div>
+          <div class="crit"><span class="crit__n">03</span><p><b>Vẫn trở thành sách năng suất.</b> "Chấp nhận hữu hạn" rốt cuộc biến thành <i>một thứ nữa để giỏi</i> — một hệ thống mới để tự đánh giá, đúng cái bẫy ông mô tả.</p></div>
+          <div class="crit"><span class="crit__n">04</span><p><b>Quietism.</b> Nếu mọi thứ đều vô nghĩa vũ trụ, đâu là động lực cho tham ambition dài hạn hay thay đổi chính trị? Ông phủ nhận hệ quả nhưng <b>không trả lời thực</b>.</p></div>
+          <div class="crit"><span class="crit__n">05</span><p><b>Lặp.</b> Phàn nàn phổ biến nhất của độc giả: luận điểm cơ bản hoàn tất khoảng trang 100, phần còn lại xoay quanh cùng vài ý.</p></div>
+          <div class="crit"><span class="crit__n">06</span><p><b>Nền TMT đã replicate kém.</b> "Năng suất = chối bỏ cái chết" dựa Terror Management Theory (Becker → Pyszczynski/Solomon/Greenberg). Nhưng <i>PLOS ONE</i> 2023 ("Not so terrifying after all?") — 5 studies, 5 samples — thấy hiệu ứng mortality-salience pooled <b>không khác 0</b>. Hợp lý như triết lý, yếu như khoa học.</p></div>
+          <div class="crit"><span class="crit__n">07</span><p><b>"Tech cướp leisure" một chiều.</b> Robinson &amp; Godbey (<i>Time for Life</i>, 1997) — time-diary cho thấy người Mỹ có <b>nhiều</b> free time hơn thập niên 1960; sự khan hiếm có thể là <i>cảm nhận</i>. Cowan &amp; Schor ủng hộ ông, nhưng ông hạ thấp căng thẳng này. (Mặt khác, về screen-time doom ông lại khá hơn Hari/Haidt — Orben &amp; Przybylski: ≤0,4% phương sai.)</p></div>
+        </div>
+      </section>
+
+      <!-- ============ 5 · CLOSING ============ -->
+      <section class="closing">
+        <blockquote class="closing__q">"The day will never arrive when you finally have everything under control."</blockquote>
+        <p class="closing__t">Sẽ chẳng bao giờ có ngày bạn cuối cùng kiểm soát được mọi thứ — nên bạn cũng đừng đợi nó tới.</p>
+
+        <details class="sources">
+          <summary>Nguồn tham khảo &amp; đọc kèm</summary>
+          <ul>
+            <li>Oliver Burkeman — <i>Four Thousand Weeks: Time Management for Mortals</i> (FSG, 2021).</li>
+            <li>Martin Heidegger — <i>Sein und Zeit</i> (1927): being-towards-death.</li>
+            <li>Ernest Becker — <i>The Denial of Death</i> (1974, Pulitzer).</li>
+            <li>Seneca — <i>De Brevitate Vitae</i> (Về sự ngắn ngủi của cuộc đời).</li>
+            <li>Kieran Setiya — <i>Midlife</i> (2017): telic / atelic.</li>
+            <li>E.P. Thompson — "Time, Work-Discipline and Industrial Capitalism" (1967).</li>
+            <li>Josef Pieper — <i>Leisure as the Basis of Culture</i> (1948).</li>
+            <li>Hartmut Rosa — <i>Social Acceleration</i>.</li>
+            <li>"Not so terrifying after all?" — <i>PLOS ONE</i> (2023): replication TMT.</li>
+            <li>Orben &amp; Przybylski — <i>Nature Human Behaviour</i> (2019): digital tech ≤0,4% phương sai wellbeing.</li>
+            <li>Robinson &amp; Godbey — <i>Time for Life</i> (1997): time-diary.</li>
+            <li><b>Đọc kèm (góc chính trị / cấu trúc):</b> Jenny Odell (<i>How to Do Nothing</i>, <i>Saving Time</i>); Tricia Hersey (<i>Rest Is Resistance</i>); David Graeber (<i>Bullshit Jobs</i>).</li>
+            <li><b>Đối chiếu ngược:</b> Cal Newport — <a href="../deep-work/index.html">Deep Work</a> (2016) &amp; <i>Slow Productivity</i> (2024); James Clear — <i>Atomic Habits</i>.</li>
+          </ul>
+        </details>
+      </section>
+
+      <footer class="footer">
+        <p>Visual tổng hợp cuốn <em>Four Thousand Weeks</em> (Oliver Burkeman, 2021) · Đã cross-check &amp; đính chính nguồn.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="../../assets/book.js"></script>
+</body>
+</html>

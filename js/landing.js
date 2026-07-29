@@ -33,6 +33,32 @@ const BOOKS = [
     ready: true,
   },
 
+  {
+    slug: 'atomic-habits',
+    title: 'Atomic Habits',
+    titleVi: 'Thói quen nguyên tử',
+    author: 'James Clear',
+    year: 2018,
+    tag: 'Phát triển bản thân',
+    glyph: '🔁',
+    blurb: '4 Quy luật thói quen — dễ áp dụng, nhưng nhiều tuyên bố khoa học bị thổi phồng (bản sắc, 1%=37×) và giai thoại mang thiên kiến sống sót.',
+    cover: { from: '#16a34a', to: '#15803d' },
+    ready: true,
+  },
+
+  {
+    slug: 'four-thousand-weeks',
+    title: 'Four Thousand Weeks',
+    titleVi: 'Bốn nghìn tuần',
+    author: 'Oliver Burkeman',
+    year: 2021,
+    tag: 'Triết lý',
+    glyph: '⏳',
+    blurb: 'Một đời chỉ ≈ 4000 tuần — hữu hạn không phải lỗi, mà là điều kiện của ý nghĩa. "Làm hết mọi việc" bất khả thi về cấu trúc.',
+    cover: { from: '#c2410c', to: '#9a3412' },
+    ready: true,
+  },
+
   /* ---------- Mẫu: thêm sách mới theo cấu trúc này ----------
   {
     slug: 'atomic-habits',
